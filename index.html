@@ -33,21 +33,21 @@ html, body { height: 100%; font-family: var(--font); background: var(--bg); colo
 header { display: flex; align-items: center; justify-content: space-between; padding: 0 36px; height: 56px; background: var(--white); border-bottom: 1px solid var(--border); position: sticky; top: 0; z-index: 100; gap: 16px; }
 .brand { display: flex; align-items: center; gap: 10px; flex-shrink: 0; }
 .brand-mark { width: 22px; height: 22px; flex-shrink: 0; background: var(--yellow); border-radius: 4px; }
-.brand-text { font-size: 13px; font-weight: 600; color: var(--blue); letter-spacing: .01em; line-height: 1; }
+.brand-text { font-size:12px; font-weight: 600; color: var(--blue); letter-spacing: .01em; line-height: 1; }
 .brand-text span { font-weight: 400; color: var(--text-soft); }
 .nav-row { display: flex; align-items: center; gap: 10px; }
-.nav-btn { height: 32px; padding: 0 14px; border: 1px solid var(--border); border-radius: 6px; background: var(--white); font-family: var(--font); font-size: 13px; font-weight: 500; color: var(--text); cursor: pointer; transition: background .12s, border-color .12s, color .12s; white-space: nowrap; }
+.nav-btn { height: 32px; padding: 0 14px; border: 1px solid var(--border); border-radius: 6px; background: var(--white); font-family: var(--font); font-size:12px; font-weight: 500; color: var(--text); cursor: pointer; transition: background .12s, border-color .12s, color .12s; white-space: nowrap; }
 .nav-btn:hover { background: var(--bg); border-color: #ccc; }
 .nav-btn:disabled { opacity: .35; cursor: default; }
 .nav-btn.primary { background: var(--blue); border-color: var(--blue); color: #fff; }
 .nav-btn.primary:hover { background: var(--blue-mid); border-color: var(--blue-mid); }
 .nav-btn.primary:disabled { opacity: .35; }
-.slide-counter { font-size: 12px; color: var(--text-soft); min-width: 48px; text-align: center; font-variant-numeric: tabular-nums; }
+.slide-counter { font-size:11px; color: var(--text-soft); min-width: 48px; text-align: center; font-variant-numeric: tabular-nums; }
 .progress-track { height: 2px; background: var(--border); flex-shrink: 0; }
 .progress-fill { height: 100%; background: var(--yellow); transition: width .3s ease; border-radius: 0 2px 2px 0; }
 main { flex: 1; }
 .slide { display: none; min-height: calc(100vh - 58px); }
-.slide.active { display: flex; flex-direction: column; }
+.slide.active { display: flex; flex-direction: column; height: calc(100vh - 58px); overflow: hidden; }
 
 /* CAPA */
 .slide-cover { background: var(--blue-dark); position: relative; overflow: hidden; justify-content: flex-end; }
@@ -59,50 +59,50 @@ main { flex: 1; }
 .cover-inner { position: relative; z-index: 2; padding: 64px 72px 80px; max-width: 860px; width: 100%; display: flex; flex-direction: column; flex: 1; justify-content: flex-end; }
 .cover-eyebrow { display: flex; align-items: center; gap: 10px; margin-bottom: 28px; }
 .cover-eyebrow-mark { width: 28px; height: 28px; background: var(--yellow); border-radius: 6px; display: flex; align-items: center; justify-content: center; flex-shrink: 0; }
-.cover-eyebrow-text { font-size: 13px; font-weight: 600; color: rgba(255,255,255,.55); letter-spacing: .1em; text-transform: uppercase; }
-.cover-title { font-size: clamp(42px, 6vw, 72px); font-weight: 700; color: var(--white); line-height: 1.05; letter-spacing: -.02em; margin-bottom: 20px; }
+.cover-eyebrow-text { font-size:12px; font-weight: 600; color: rgba(255,255,255,.55); letter-spacing: .1em; text-transform: uppercase; }
+.cover-title { font-size:clamp(41px, 6vw, 71px); font-weight: 700; color: var(--white); line-height: 1.05; letter-spacing: -.02em; margin-bottom: 20px; }
 .cover-title em { font-style: normal; color: var(--yellow); }
-.cover-company { font-size: 16px; font-weight: 600; color: rgba(255,255,255,.6); margin-bottom: 10px; }
-.cover-sub { font-size: 18px; color: rgba(255,255,255,.75); line-height: 1.55; max-width: 520px; margin-bottom: 40px; }
+.cover-company { font-size:15px; font-weight: 600; color: rgba(255,255,255,.6); margin-bottom: 10px; }
+.cover-sub { font-size:17px; color: rgba(255,255,255,.75); line-height: 1.55; max-width: 520px; margin-bottom: 40px; }
 .cover-tags { display: flex; flex-wrap: wrap; gap: 8px; }
-.cover-tag { padding: 5px 14px; border: 1px solid rgba(255,255,255,.2); border-radius: 20px; font-size: 13px; color: rgba(255,255,255,.7); background: rgba(255,255,255,.07); }
+.cover-tag { padding: 5px 14px; border: 1px solid rgba(255,255,255,.2); border-radius: 20px; font-size:12px; color: rgba(255,255,255,.7); background: rgba(255,255,255,.07); }
 .cover-chapter { position: absolute; top: 40px; right: 72px; z-index: 3; }
-.cover-chapter-badge { background: rgba(255,255,255,.12); border: 1px solid rgba(255,255,255,.18); border-radius: 20px; padding: 5px 14px; font-size: 12px; color: rgba(255,255,255,.6); font-weight: 500; letter-spacing: .04em; }
+.cover-chapter-badge { background: rgba(255,255,255,.12); border: 1px solid rgba(255,255,255,.18); border-radius: 20px; padding: 5px 14px; font-size:11px; color: rgba(255,255,255,.6); font-weight: 500; letter-spacing: .04em; }
 
 /* CONTENT */
 .slide-content { padding: 48px 64px; max-width: 1160px; width: 100%; margin: 0 auto; flex: 1; }
-.slide-label { font-size: 12px; font-weight: 700; letter-spacing: .14em; text-transform: uppercase; color: var(--blue); margin-bottom: 14px; display: flex; align-items: center; gap: 10px; }
+.slide-label { font-size:11px; font-weight: 700; letter-spacing: .14em; text-transform: uppercase; color: var(--blue); margin-bottom: 14px; display: flex; align-items: center; gap: 10px; }
 .slide-label::before { content: ''; width: 16px; height: 2px; background: var(--yellow); border-radius: 2px; flex-shrink: 0; }
-.slide-h1 { font-size: clamp(34px, 5vw, 54px); font-weight: 700; letter-spacing: -.02em; line-height: 1.1; color: var(--text); margin-bottom: 10px; }
-.slide-subtitle { font-size: 18px; line-height: 1.6; color: var(--text-mid); max-width: 860px; margin-bottom: 36px; }
+.slide-h1 { font-size:clamp(33px, 5vw, 53px); font-weight: 700; letter-spacing: -.02em; line-height: 1.1; color: var(--text); margin-bottom: 10px; }
+.slide-subtitle { font-size:17px; line-height: 1.6; color: var(--text-mid); max-width: 860px; margin-bottom: 36px; }
 
 /* LISTS */
 .bullet-list { list-style: none; margin: 0; padding: 0; }
-.bullet-list li { font-size: 16px; line-height: 1.55; color: var(--text-mid); margin-bottom: 10px; padding-left: 24px; position: relative; }
+.bullet-list li { font-size:15px; line-height: 1.55; color: var(--text-mid); margin-bottom: 10px; padding-left: 24px; position: relative; }
 .bullet-list li::before { content: '•'; position: absolute; left: 0; color: var(--yellow); font-weight: 700; }
 
 /* SECTION GRID */
 .section-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 24px; margin-top: 24px; }
 .section-box { background: var(--surface); border: 1px solid var(--border); border-radius: var(--radius); padding: 28px; }
-.section-box h3 { font-size: 18px; font-weight: 700; color: var(--blue); margin-bottom: 16px; }
-.section-box p { font-size: 16px; color: var(--text-mid); line-height: 1.6; margin-bottom: 12px; }
+.section-box h3 { font-size:17px; font-weight: 700; color: var(--blue); margin-bottom: 16px; }
+.section-box p { font-size:15px; color: var(--text-mid); line-height: 1.6; margin-bottom: 12px; }
 .section-box p:last-child { margin-bottom: 0; }
 
 /* FLOW */
 .flow { display: flex; align-items: center; flex-wrap: wrap; gap: 0; margin: 16px 0 24px; }
 .flow-step { background: var(--surface); border: 1px solid var(--border); border-radius: 8px; padding: 12px 16px; text-align: center; min-width: 110px; }
-.flow-step .fs-label { font-size: 10px; color: var(--text-soft); letter-spacing: .06em; text-transform: uppercase; margin-bottom: 3px; }
-.flow-step .fs-name { font-size: 13px; font-weight: 700; color: var(--text); }
-.flow-arrow { color: var(--text-soft); padding: 0 6px; font-size: 14px; }
+.flow-step .fs-label { font-size:9px; color: var(--text-soft); letter-spacing: .06em; text-transform: uppercase; margin-bottom: 3px; }
+.flow-step .fs-name { font-size:12px; font-weight: 700; color: var(--text); }
+.flow-arrow { color: var(--text-soft); padding: 0 6px; font-size:13px; }
 
 /* ROLE TABLE */
-.role-table { width: 100%; border-collapse: collapse; font-size: 14px; margin-top: 16px; }
+.role-table { width: 100%; border-collapse: collapse; font-size:13px; margin-top: 16px; }
 .role-table thead tr { background: var(--bg); border-bottom: 2px solid var(--border); }
-.role-table th { text-align: left; font-size: 11px; font-weight: 700; letter-spacing: .09em; text-transform: uppercase; color: var(--text-soft); padding: 10px 12px; }
-.role-table td { padding: 12px; border-bottom: 1px solid var(--border); vertical-align: middle; line-height: 1.4; font-size: 13px; }
+.role-table th { text-align: left; font-size:10px; font-weight: 700; letter-spacing: .09em; text-transform: uppercase; color: var(--text-soft); padding: 10px 12px; }
+.role-table td { padding: 12px; border-bottom: 1px solid var(--border); vertical-align: middle; line-height: 1.4; font-size:12px; }
 .role-table tbody tr:last-child td { border-bottom: none; }
 .role-table tbody tr:hover td { background: var(--blue-softer); }
-.badge { display: inline-flex; align-items: center; gap: 4px; padding: 3px 9px; border-radius: 4px; font-size: 11px; font-weight: 700; letter-spacing: .04em; white-space: nowrap; }
+.badge { display: inline-flex; align-items: center; gap: 4px; padding: 3px 9px; border-radius: 4px; font-size:10px; font-weight: 700; letter-spacing: .04em; white-space: nowrap; }
 .badge-prd  { background: var(--blue-soft); color: var(--blue-dark); }
 .badge-dev  { background: #E8F7EF; color: #1A5C3A; }
 .badge-both { background: var(--yellow-soft); color: #7A5500; border: 1px solid #ffe066; }
@@ -110,25 +110,25 @@ main { flex: 1; }
 /* CEREMONIES LIST */
 .ceremony-list { display: flex; flex-direction: column; gap: 12px; margin-top: 16px; }
 .ceremony-item { background: var(--surface); border: 1px solid var(--border); border-radius: 8px; padding: 16px; }
-.ceremony-name { font-size: 15px; font-weight: 700; margin-bottom: 8px; color: var(--blue); }
-.ceremony-detail { font-size: 13px; color: var(--text-mid); line-height: 1.5; }
+.ceremony-name { font-size:14px; font-weight: 700; margin-bottom: 8px; color: var(--blue); }
+.ceremony-detail { font-size:12px; color: var(--text-mid); line-height: 1.5; }
 
 /* CARDS 3-COLUMN */
 .card-grid-3 { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; margin-top: 20px; }
 .card-3 { background: var(--surface); border: 1px solid var(--border); border-radius: var(--radius); padding: 22px; }
-.card-3 h4 { font-size: 16px; font-weight: 700; margin-bottom: 8px; }
-.card-3 p { font-size: 14px; color: var(--text-mid); line-height: 1.5; }
+.card-3 h4 { font-size:15px; font-weight: 700; margin-bottom: 8px; }
+.card-3 p { font-size:13px; color: var(--text-mid); line-height: 1.5; }
 
 /* TOPIC CARDS */
 .topic-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 14px; margin-top: 16px; }
 .topic-card { background: var(--surface); border: 1px solid var(--border); border-radius: var(--radius); padding: 24px 24px 22px; transition: border-color .15s; }
 .topic-card:hover { border-color: var(--blue); }
-.topic-num { font-size: 11px; font-weight: 700; letter-spacing: .08em; color: var(--yellow); background: var(--blue); display: inline-block; padding: 2px 8px; border-radius: 4px; margin-bottom: 12px; }
-.topic-card h3 { font-size: 17px; font-weight: 700; margin-bottom: 5px; }
-.topic-card p { font-size: 15px; color: var(--text-soft); margin: 0; line-height: 1.45; }
+.topic-num { font-size:10px; font-weight: 700; letter-spacing: .08em; color: var(--yellow); background: var(--blue); display: inline-block; padding: 2px 8px; border-radius: 4px; margin-bottom: 12px; }
+.topic-card h3 { font-size:16px; font-weight: 700; margin-bottom: 5px; }
+.topic-card p { font-size:14px; color: var(--text-soft); margin: 0; line-height: 1.45; }
 
 /* INSIGHT BOX */
-.insight { background: var(--blue-soft); border-left: 4px solid var(--blue); padding: 18px 20px; border-radius: 4px; margin-top: 24px; font-size: 16px; color: var(--blue-dark); line-height: 1.6; font-weight: 500; }
+.insight { background: var(--blue-soft); border-left: 4px solid var(--blue); padding: 18px 20px; border-radius: 4px; margin-top: 24px; font-size:15px; color: var(--blue-dark); line-height: 1.6; font-weight: 500; }
 
 
 /* VALUE FLOW (slide 07) */
@@ -136,31 +136,31 @@ main { flex: 1; }
 .value-flow-card { background: var(--surface); border: 1px solid var(--border); border-radius: var(--radius); padding: 24px; display: flex; flex-direction: column; }
 .value-flow-card.upstream { border-top: 4px solid var(--blue); }
 .value-flow-card.downstream { border-top: 4px solid var(--orange); }
-.value-flow-tag { display: inline-block; align-self: flex-start; font-size: 11px; font-weight: 700; letter-spacing: .08em; text-transform: uppercase; padding: 4px 10px; border-radius: 999px; margin-bottom: 14px; }
+.value-flow-tag { display: inline-block; align-self: flex-start; font-size:10px; font-weight: 700; letter-spacing: .08em; text-transform: uppercase; padding: 4px 10px; border-radius: 999px; margin-bottom: 14px; }
 .upstream .value-flow-tag { background: var(--blue-soft); color: var(--blue); }
 .downstream .value-flow-tag { background: var(--orange-soft); color: var(--orange); }
-.value-flow-card h2 { font-size: 22px; font-weight: 700; color: var(--text); margin-bottom: 8px; }
-.value-flow-card > p { font-size: 16px; color: var(--text-mid); line-height: 1.6; margin-bottom: 16px; }
-.value-flow-card h3 { font-size: 12px; font-weight: 700; letter-spacing: .06em; text-transform: uppercase; color: var(--text-soft); margin-bottom: 8px; }
+.value-flow-card h2 { font-size:21px; font-weight: 700; color: var(--text); margin-bottom: 8px; }
+.value-flow-card > p { font-size:15px; color: var(--text-mid); line-height: 1.6; margin-bottom: 16px; }
+.value-flow-card h3 { font-size:11px; font-weight: 700; letter-spacing: .06em; text-transform: uppercase; color: var(--text-soft); margin-bottom: 8px; }
 .value-flow-card ul { list-style: none; margin-bottom: 18px; }
-.value-flow-card ul li { font-size: 16px; color: var(--text-mid); line-height: 1.5; padding: 4px 0 4px 18px; position: relative; }
+.value-flow-card ul li { font-size:15px; color: var(--text-mid); line-height: 1.5; padding: 4px 0 4px 18px; position: relative; }
 .value-flow-card ul li::before { content: ''; position: absolute; left: 0; top: 12px; width: 6px; height: 6px; border-radius: 50%; }
 .upstream ul li::before { background: var(--blue); }
 .downstream ul li::before { background: var(--orange); }
-.value-flow-objective { margin-top: auto; background: var(--bg); border-radius: 6px; padding: 14px 16px; font-size: 15px; color: var(--text-mid); line-height: 1.55; }
-.value-flow-objective strong { display: block; font-size: 11px; font-weight: 700; letter-spacing: .06em; text-transform: uppercase; color: var(--text); margin-bottom: 4px; }
-.value-flow-insight { background: var(--blue-soft); border-left: 4px solid var(--blue); padding: 18px 20px; border-radius: 4px; margin-top: 24px; font-size: 16px; color: var(--blue-dark); line-height: 1.6; font-weight: 500; }
+.value-flow-objective { margin-top: auto; background: var(--bg); border-radius: 6px; padding: 14px 16px; font-size:14px; color: var(--text-mid); line-height: 1.55; }
+.value-flow-objective strong { display: block; font-size:10px; font-weight: 700; letter-spacing: .06em; text-transform: uppercase; color: var(--text); margin-bottom: 4px; }
+.value-flow-insight { background: var(--blue-soft); border-left: 4px solid var(--blue); padding: 18px 20px; border-radius: 4px; margin-top: 24px; font-size:15px; color: var(--blue-dark); line-height: 1.6; font-weight: 500; }
 
 /* REALITY GRID */
 .reality-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; margin-top: 16px; }
 .reality-col { background: var(--surface); border: 1px solid var(--border); border-radius: var(--radius); padding: 24px; }
 .reality-col.bad { border-color: #fee2e2; }
 .reality-col.good { border-color: #dcfce7; }
-.reality-col h3 { font-size: 17px; font-weight: 700; margin-bottom: 14px; }
+.reality-col h3 { font-size:16px; font-weight: 700; margin-bottom: 14px; }
 .reality-col.bad h3 { color: #991b1b; }
 .reality-col.good h3 { color: #166534; }
 .reality-col ul { list-style: none; margin: 0; padding: 0; }
-.reality-col li { font-size: 15px; line-height: 1.6; color: var(--text-mid); margin-bottom: 10px; padding-left: 20px; position: relative; }
+.reality-col li { font-size:14px; line-height: 1.6; color: var(--text-mid); margin-bottom: 10px; padding-left: 20px; position: relative; }
 .reality-col.bad li::before { content: '✕'; position: absolute; left: 0; color: #dc2626; font-weight: 700; }
 .reality-col.good li::before { content: '✓'; position: absolute; left: 0; color: #16a34a; font-weight: 700; }
 
@@ -170,23 +170,23 @@ main { flex: 1; }
 .final-shape-2 { position: absolute; width: 480px; height: 480px; background: var(--blue-mid); bottom: -200px; left: -80px; border-radius: 38% 62% 46% 54% / 60% 44% 56% 40%; opacity: .5; }
 .final-inner { position: relative; z-index: 2; display: grid; grid-template-columns: 1fr 1fr; gap: 56px; padding: 64px 72px; max-width: 1200px; margin: 0 auto; align-items: center; }
 .final-left { display: flex; flex-direction: column; }
-.final-eyebrow { font-size: 11px; font-weight: 700; letter-spacing: .14em; text-transform: uppercase; color: var(--yellow); margin-bottom: 12px; }
-.final-title { font-size: clamp(32px, 5vw, 56px); font-weight: 700; color: white; line-height: 1.1; letter-spacing: -.02em; margin-bottom: 16px; }
-.final-desc { font-size: 17px; color: rgba(255,255,255,.75); line-height: 1.6; margin-bottom: 24px; }
+.final-eyebrow { font-size:10px; font-weight: 700; letter-spacing: .14em; text-transform: uppercase; color: var(--yellow); margin-bottom: 12px; }
+.final-title { font-size:clamp(31px, 5vw, 55px); font-weight: 700; color: white; line-height: 1.1; letter-spacing: -.02em; margin-bottom: 16px; }
+.final-desc { font-size:16px; color: rgba(255,255,255,.75); line-height: 1.6; margin-bottom: 24px; }
 .final-checklist { list-style: none; margin: 0; padding: 0; margin-bottom: 24px; }
-.final-checklist li { display: flex; align-items: flex-start; gap: 12px; font-size: 16px; color: rgba(255,255,255,.85); line-height: 1.5; margin-bottom: 10px; }
+.final-checklist li { display: flex; align-items: flex-start; gap: 12px; font-size:15px; color: rgba(255,255,255,.85); line-height: 1.5; margin-bottom: 10px; }
 .final-check-dot { width: 20px; height: 20px; border-radius: 50%; background: var(--yellow); flex-shrink: 0; display: flex; align-items: center; justify-content: center; }
 .final-check-dot svg { width: 10px; height: 10px; }
-.final-msg { font-size: 16px; color: rgba(255,255,255,.7); line-height: 1.6; }
+.final-msg { font-size:15px; color: rgba(255,255,255,.7); line-height: 1.6; }
 .final-right { display: flex; flex-direction: column; gap: 16px; }
 .contact-card { background: rgba(255,255,255,.08); border: 1px solid rgba(255,255,255,.15); border-radius: var(--radius); padding: 20px; }
 .contact-header { display: flex; align-items: center; gap: 12px; margin-bottom: 14px; }
 .contact-icon { width: 40px; height: 40px; border-radius: 8px; background: rgba(255,255,255,.1); display: flex; align-items: center; justify-content: center; flex-shrink: 0; }
 .contact-icon svg { width: 20px; height: 20px; stroke: rgba(255,255,255,.6); }
-.contact-label { font-size: 11px; font-weight: 600; letter-spacing: .06em; text-transform: uppercase; color: rgba(255,255,255,.5); }
-.contact-who { font-size: 14px; font-weight: 700; color: white; }
-.contact-detail { font-size: 15px; color: rgba(255,255,255,.7); line-height: 1.6; }
-.chapter-tag { display: inline-block; font-size: 12px; color: rgba(255,255,255,.5); font-weight: 500; padding: 8px 12px; border: 1px solid rgba(255,255,255,.2); border-radius: 20px; }
+.contact-label { font-size:10px; font-weight: 600; letter-spacing: .06em; text-transform: uppercase; color: rgba(255,255,255,.5); }
+.contact-who { font-size:13px; font-weight: 700; color: white; }
+.contact-detail { font-size:14px; color: rgba(255,255,255,.7); line-height: 1.6; }
+.chapter-tag { display: inline-block; font-size:11px; color: rgba(255,255,255,.5); font-weight: 500; padding: 8px 12px; border: 1px solid rgba(255,255,255,.2); border-radius: 20px; }
 
 
 
@@ -227,7 +227,7 @@ main { flex: 1; }
   border-radius: 50%;
   background: var(--blue-soft);
   color: var(--blue);
-  font-size: 12px;
+  font-size:11px;
   font-weight: 800;
   display: inline-flex;
   align-items: center;
@@ -235,13 +235,13 @@ main { flex: 1; }
   margin-bottom: 10px;
 }
 .value-step-title {
-  font-size: 18px;
+  font-size:17px;
   font-weight: 800;
   color: var(--text);
   margin-bottom: 8px;
 }
 .value-step-desc {
-  font-size: 14px;
+  font-size:13px;
   color: var(--text-mid);
   line-height: 1.45;
 }
@@ -258,13 +258,13 @@ main { flex: 1; }
   padding: 24px;
 }
 .value-context-card h3 {
-  font-size: 17px;
+  font-size:16px;
   color: var(--blue);
   margin-bottom: 12px;
 }
 .value-context-card p,
 .value-context-card li {
-  font-size: 15px;
+  font-size:14px;
   line-height: 1.55;
   color: var(--text-mid);
 }
@@ -294,7 +294,7 @@ main { flex: 1; }
   background: var(--yellow-soft);
 }
 .quality-kicker {
-  font-size: 11px;
+  font-size:10px;
   font-weight: 800;
   letter-spacing: .12em;
   text-transform: uppercase;
@@ -302,14 +302,14 @@ main { flex: 1; }
   margin-bottom: 6px;
 }
 .quality-title {
-  font-size: 23px;
+  font-size:22px;
   font-weight: 800;
   color: var(--blue-dark);
   margin-bottom: 6px;
   min-height: 34px;
 }
 .quality-desc {
-  font-size: 15px;
+  font-size:14px;
   color: var(--text-mid);
   line-height: 1.45;
   margin-top: 16px;
@@ -327,7 +327,7 @@ main { flex: 1; }
   display: flex;
   align-items: flex-start;
   gap: 10px;
-  font-size: 15px;
+  font-size:14px;
   line-height: 1.45;
   color: var(--text-mid);
 }
@@ -341,7 +341,7 @@ main { flex: 1; }
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  font-size: 11px;
+  font-size:10px;
   font-weight: 800;
 }
 .quality-card-header.done + .quality-list .quality-check {
@@ -354,7 +354,7 @@ main { flex: 1; }
   border-radius: 6px;
   padding: 18px 20px;
   color: var(--blue-dark);
-  font-size: 16px;
+  font-size:15px;
   line-height: 1.55;
 }
 
@@ -373,7 +373,7 @@ main { flex: 1; }
   min-height: 224px;
 }
 .error-card h3 {
-  font-size: 17px;
+  font-size:16px;
   font-weight: 800;
   color: var(--blue);
   margin-bottom: 14px;
@@ -387,7 +387,7 @@ main { flex: 1; }
   position: relative;
   padding-left: 16px;
   margin-bottom: 10px;
-  font-size: 14px;
+  font-size:13px;
   color: var(--text-mid);
   line-height: 1.45;
 }
@@ -442,17 +442,17 @@ main { flex: 1; }
   display: flex;
   align-items: center;
   justify-content: center;
-  font-size: 18px;
+  font-size:17px;
   margin-bottom: 12px;
 }
 .role-card-title {
-  font-size: 19px;
+  font-size:18px;
   font-weight: 800;
   color: var(--text);
   margin-bottom: 4px;
 }
 .role-card-subtitle {
-  font-size: 13px;
+  font-size:12px;
   font-weight: 700;
   color: var(--blue);
   margin-bottom: 14px;
@@ -467,7 +467,7 @@ main { flex: 1; }
   position: relative;
   padding-left: 16px;
   margin-bottom: 7px;
-  font-size: 14px;
+  font-size:13px;
   line-height: 1.45;
   color: var(--text-mid);
 }
@@ -494,13 +494,13 @@ main { flex: 1; }
   padding: 14px 16px;
   min-width: 140px;
   text-align: center;
-  font-size: 15px;
+  font-size:14px;
   font-weight: 800;
   color: var(--blue-dark);
 }
 .blocker-arrow {
   color: var(--text-soft);
-  font-size: 16px;
+  font-size:15px;
 }
 .blocker-examples-grid {
   display: grid;
@@ -516,7 +516,7 @@ main { flex: 1; }
   min-height: 172px;
 }
 .blocker-card h3 {
-  font-size: 17px;
+  font-size:16px;
   color: var(--blue);
   margin-bottom: 12px;
   line-height: 1.25;
@@ -530,7 +530,7 @@ main { flex: 1; }
   position: relative;
   padding-left: 16px;
   margin-bottom: 8px;
-  font-size: 14px;
+  font-size:13px;
   color: var(--text-mid);
   line-height: 1.45;
 }
@@ -550,7 +550,7 @@ main { flex: 1; }
 .blocker-rule-card {
   border-radius: 10px;
   padding: 20px 22px;
-  font-size: 16px;
+  font-size:15px;
   line-height: 1.55;
 }
 .blocker-rule-card.gold {
@@ -601,26 +601,26 @@ main { flex: 1; }
   border-radius: 50%;
   background: var(--blue-soft);
   color: var(--blue);
-  font-size: 13px;
+  font-size:12px;
   font-weight: 800;
   display: flex;
   align-items: center;
   justify-content: center;
 }
 .metric-body h3 {
-  font-size: 18px;
+  font-size:17px;
   font-weight: 800;
   color: var(--text);
   margin-bottom: 4px;
 }
 .metric-body p {
-  font-size: 15px;
+  font-size:14px;
   color: var(--text-mid);
   line-height: 1.45;
   margin: 0;
 }
 .metric-frequency {
-  font-size: 12px;
+  font-size:11px;
   font-weight: 800;
   padding: 6px 12px;
   border-radius: 20px;
@@ -672,7 +672,7 @@ main { flex: 1; }
   border-style: dashed;
 }
 .estimate-number {
-  font-size: 34px;
+  font-size:33px;
   font-weight: 800;
   line-height: 1;
   color: var(--text);
@@ -682,13 +682,13 @@ main { flex: 1; }
   color: #7A5500;
 }
 .estimate-rule-title {
-  font-size: 15px;
+  font-size:14px;
   font-weight: 800;
   color: var(--blue-dark);
   margin-bottom: 12px;
 }
 .estimate-label {
-  font-size: 16px;
+  font-size:15px;
   color: var(--text-mid);
   line-height: 1.55;
 }
@@ -709,7 +709,7 @@ main { flex: 1; }
   color: var(--blue-dark);
 }
 .estimate-insight-card p {
-  font-size: 16px;
+  font-size:15px;
   color: var(--blue-dark);
   line-height: 1.6;
   margin: 0;
@@ -721,7 +721,7 @@ main { flex: 1; }
   padding: 18px 20px;
 }
 .estimate-mini-list h3 {
-  font-size: 14px;
+  font-size:13px;
   color: var(--blue);
   margin-bottom: 10px;
 }
@@ -734,7 +734,7 @@ main { flex: 1; }
   position: relative;
   padding-left: 18px;
   margin-bottom: 7px;
-  font-size: 15px;
+  font-size:14px;
   color: var(--text-mid);
 }
 .estimate-mini-list li::before {
@@ -773,13 +773,13 @@ main { flex: 1; }
   padding: 20px 16px 18px;
 }
 .ceremony-card-title {
-  font-size: 18px;
+  font-size:17px;
   font-weight: 800;
   line-height: 1.2;
   margin-bottom: 8px;
 }
 .ceremony-card-meta {
-  font-size: 15px;
+  font-size:14px;
   color: rgba(255,255,255,.82);
   line-height: 1.35;
 }
@@ -796,7 +796,7 @@ main { flex: 1; }
 .ceremony-card-body li {
   position: relative;
   padding-left: 20px;
-  font-size: 15px;
+  font-size:14px;
   color: var(--text-mid);
   line-height: 1.45;
 }
@@ -806,7 +806,7 @@ main { flex: 1; }
   left: 0;
   top: 0;
   color: var(--yellow);
-  font-size: 20px;
+  font-size:19px;
   font-weight: 800;
   line-height: 1;
 }
@@ -824,25 +824,25 @@ main { flex: 1; }
 .board-flow-head.prd { background: var(--blue-soft); }
 .board-flow-head.dev { background: #E8F7EF; }
 .board-flow-title { display: flex; flex-direction: column; gap: 2px; }
-.board-flow-kicker { font-size: 11px; font-weight: 800; letter-spacing: .12em; text-transform: uppercase; color: var(--text-soft); }
-.board-flow-name { font-size: 18px; font-weight: 700; color: var(--blue-dark); }
-.board-flow-desc { font-size: 15px; color: var(--text-mid); max-width: 520px; line-height: 1.45; }
+.board-flow-kicker { font-size:10px; font-weight: 800; letter-spacing: .12em; text-transform: uppercase; color: var(--text-soft); }
+.board-flow-name { font-size:17px; font-weight: 700; color: var(--blue-dark); }
+.board-flow-desc { font-size:14px; color: var(--text-mid); max-width: 520px; line-height: 1.45; }
 .board-status-row { display: flex; align-items: center; flex-wrap: wrap; gap: 8px; padding: 18px 20px; }
-.status-chip { display: inline-flex; align-items: center; justify-content: center; min-height: 38px; padding: 9px 14px; border-radius: 8px; background: var(--white); border: 1px solid var(--border); font-size: 13px; font-weight: 700; color: var(--blue-dark); line-height: 1.25; text-align: center; }
+.status-chip { display: inline-flex; align-items: center; justify-content: center; min-height: 38px; padding: 9px 14px; border-radius: 8px; background: var(--white); border: 1px solid var(--border); font-size:12px; font-weight: 700; color: var(--blue-dark); line-height: 1.25; text-align: center; }
 .status-chip.prd { background: var(--blue-softer); border-color: #C8D7F2; }
 .status-chip.dev { background: var(--white); border-color: #D6E9DD; color: #1A5C3A; }
 .status-chip.done { background: var(--orange-soft); border-color: #FFD1B8; color: var(--orange); }
-.status-arrow { color: var(--text-soft); font-size: 14px; }
-.flow-transition { align-self: center; display: inline-flex; align-items: center; gap: 8px; background: var(--orange-soft); color: var(--orange); border: 1px solid #FFD1B8; border-radius: 20px; padding: 6px 14px; font-size: 12px; font-weight: 700; }
+.status-arrow { color: var(--text-soft); font-size:13px; }
+.flow-transition { align-self: center; display: inline-flex; align-items: center; gap: 8px; background: var(--orange-soft); color: var(--orange); border: 1px solid #FFD1B8; border-radius: 20px; padding: 6px 14px; font-size:11px; font-weight: 700; }
 .board-usage-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; margin-top: 18px; }
 .usage-card { background: var(--surface); border: 1px solid var(--border); border-radius: var(--radius); padding: 22px; }
-.usage-card h3 { font-size: 17px; font-weight: 700; color: var(--blue); margin-bottom: 12px; }
+.usage-card h3 { font-size:16px; font-weight: 700; color: var(--blue); margin-bottom: 12px; }
 .usage-line { display: grid; grid-template-columns: 110px 1fr; gap: 12px; padding: 9px 0; border-top: 1px solid var(--border); }
 .usage-line:first-of-type { border-top: none; }
-.usage-label { font-size: 11px; font-weight: 800; letter-spacing: .08em; text-transform: uppercase; color: var(--blue-dark); }
-.usage-content { font-size: 14px; color: var(--text-mid); line-height: 1.5; }
+.usage-label { font-size:10px; font-weight: 800; letter-spacing: .08em; text-transform: uppercase; color: var(--blue-dark); }
+.usage-content { font-size:13px; color: var(--text-mid); line-height: 1.5; }
 .mini-tags { display: flex; flex-wrap: wrap; gap: 6px; }
-.mini-tag { background: var(--blue-softer); color: var(--blue-dark); font-size: 12px; font-weight: 700; border-radius: 14px; padding: 3px 9px; }
+.mini-tag { background: var(--blue-softer); color: var(--blue-dark); font-size:11px; font-weight: 700; border-radius: 14px; padding: 3px 9px; }
 @media (max-width: 900px) {
   .board-usage-grid { grid-template-columns: 1fr; }
   .usage-line { grid-template-columns: 1fr; gap: 4px; }
@@ -877,24 +877,24 @@ header button {
   .card-grid-3 { grid-template-columns: repeat(2, 1fr); }
   .topic-grid { grid-template-columns: repeat(2, 1fr); }
   .value-context-grid { grid-template-columns: 1fr; }
-  .role-table { font-size: 13px; }
+  .role-table { font-size:12px; }
   .role-table td { padding: 10px; }
 }
 
 @media (max-width: 640px) {
   header { padding: 0 20px; height: auto; flex-wrap: wrap; }
-  .brand-text { font-size: 12px; }
+  .brand-text { font-size:11px; }
   .nav-row { width: 100%; justify-content: space-between; gap: 8px; }
-  .nav-btn { height: 28px; padding: 0 10px; font-size: 12px; }
-  .slide-counter { font-size: 11px; min-width: 40px; }
+  .nav-btn { height: 28px; padding: 0 10px; font-size:11px; }
+  .slide-counter { font-size:10px; min-width: 40px; }
   
   .slide-content { padding: 28px 20px 48px; }
   .cover-inner { padding: 40px 24px 60px; }
   .cover-chapter { display: none; }
-  .cover-title { font-size: clamp(32px, 7vw, 48px); }
-  .cover-sub { font-size: 16px; }
-  .slide-h1 { font-size: clamp(24px, 5vw, 36px); }
-  .slide-subtitle { font-size: 15px; }
+  .cover-title { font-size:clamp(31px, 7vw, 47px); }
+  .cover-sub { font-size:15px; }
+  .slide-h1 { font-size:clamp(23px, 5vw, 35px); }
+  .slide-subtitle { font-size:14px; }
   
   .card-grid-3 { grid-template-columns: 1fr; gap: 10px; }
   .topic-grid { grid-template-columns: 1fr; gap: 12px; }
@@ -906,18 +906,18 @@ header button {
   .flow-arrow { display: none; }
   .flow-step { width: 100%; min-width: auto; }
   
-  .role-table { font-size: 12px; }
-  .role-table th { font-size: 10px; padding: 8px; }
-  .role-table td { padding: 8px; font-size: 12px; }
+  .role-table { font-size:11px; }
+  .role-table th { font-size:9px; padding: 8px; }
+  .role-table td { padding: 8px; font-size:11px; }
   
   .ceremony-list { gap: 10px; }
   .ceremony-item { padding: 14px; }
-  .ceremony-name { font-size: 14px; }
-  .ceremony-detail { font-size: 12px; }
+  .ceremony-name { font-size:13px; }
+  .ceremony-detail { font-size:11px; }
   
   .final-left { flex-basis: 100%; }
   .final-right { flex-basis: 100%; }
-  .final-title { font-size: clamp(28px, 6vw, 42px); }
+  .final-title { font-size:clamp(27px, 6vw, 41px); }
   .contact-card { padding: 16px; }
 }
 
@@ -927,29 +927,1164 @@ header button {
   .brand-mark { width: 20px; height: 20px; }
   
   .slide-content { padding: 20px 16px 40px; }
-  .slide-label { font-size: 10px; }
-  .slide-h1 { font-size: clamp(22px, 6vw, 32px); margin-bottom: 8px; }
-  .slide-subtitle { font-size: 14px; margin-bottom: 24px; }
+  .slide-label { font-size:9px; }
+  .slide-h1 { font-size:clamp(21px, 6vw, 31px); margin-bottom: 8px; }
+  .slide-subtitle { font-size:13px; margin-bottom: 24px; }
   
-  .bullet-list li { font-size: 13px; }
+  .bullet-list li { font-size:12px; }
   .flow { gap: 6px; }
-  .flow-step { padding: 10px 12px; font-size: 12px; }
+  .flow-step { padding: 10px 12px; font-size:11px; }
   
   .card-3 { padding: 14px; }
-  .card-3 h4 { font-size: 13px; }
-  .card-3 p { font-size: 11px; }
+  .card-3 h4 { font-size:12px; }
+  .card-3 p { font-size:10px; }
   
   .topic-card { padding: 16px 16px 14px; }
-  .topic-num { width: 32px; height: 32px; font-size: 16px; }
-  .topic-card h3 { font-size: 13px; }
-  .topic-card p { font-size: 11px; }
+  .topic-num { width: 32px; height: 32px; font-size:15px; }
+  .topic-card h3 { font-size:12px; }
+  .topic-card p { font-size:10px; }
   
-  .final-eyebrow { font-size: 12px; }
-  .final-title { font-size: clamp(20px, 7vw, 32px); }
-  .final-desc { font-size: 14px; }
-  .final-checklist li { font-size: 13px; }
-  .final-msg { font-size: 13px; }
+  .final-eyebrow { font-size:11px; }
+  .final-title { font-size:clamp(19px, 7vw, 31px); }
+  .final-desc { font-size:13px; }
+  .final-checklist li { font-size:12px; }
+  .final-msg { font-size:12px; }
 }
+
+/* =========================================================
+   PADRONIZAÇÃO TIPOGRÁFICA — revisão de legibilidade
+   Mantém a identidade visual e aumenta textos pequenos.
+   ========================================================= */
+@media (min-width: 641px) {
+  /* Hierarquia principal */
+  .slide-h1 {
+    font-size:clamp(41px, 4.8vw, 53px);
+    line-height: 1.08;
+  }
+  .slide-subtitle {
+    font-size:18px;
+    line-height: 1.55;
+  }
+
+  /* Texto-base de leitura */
+  .bullet-list li,
+  .section-box p,
+  .value-flow-card > p,
+  .value-flow-card ul li,
+  .value-flow-objective,
+  .value-flow-insight,
+  .insight,
+  .quality-insight,
+  .blocker-rule-card,
+  .final-checklist li,
+  .final-msg {
+    font-size:15px;
+    line-height: 1.55;
+  }
+
+  /* Títulos internos */
+  .section-box h3,
+  .card-3 h4,
+  .topic-card h3,
+  .ceremony-name,
+  .value-context-card h3,
+  .role-card-title,
+  .ceremony-card-title,
+  .quality-card h3,
+  .error-card h3,
+  .blocker-card h3,
+  .metric-body h3,
+  .usage-card h3 {
+    font-size:17px;
+    line-height: 1.3;
+  }
+
+  /* Cards e componentes — corpo mínimo de 16 px */
+  .card-3 p,
+  .topic-card p,
+  .ceremony-detail,
+  .value-context-card p,
+  .value-context-card li,
+  .role-card li,
+  .ceremony-card-body li,
+  .quality-desc,
+  .quality-list li,
+  .error-card li,
+  .blocker-card li,
+  .metric-body p,
+  .estimate-label,
+  .estimate-insight-card p,
+  .estimate-mini-list li,
+  .board-flow-desc,
+  .usage-content {
+    font-size:15px;
+    line-height: 1.5;
+  }
+
+  /* Papéis */
+  .role-card-subtitle {
+    font-size:14px;
+    line-height: 1.4;
+  }
+
+  /* Cerimônias */
+  .ceremony-card-meta {
+    font-size:15px;
+  }
+
+  /* Fluxos e boards */
+  .status-chip {
+    font-size:13px;
+    line-height: 1.3;
+  }
+  .board-flow-name {
+    font-size:18px;
+  }
+  .usage-label {
+    font-size:11px;
+  }
+  .mini-tag {
+    font-size:12px;
+  }
+
+  /* Estimativas */
+  .estimate-rule-title {
+    font-size:15px;
+  }
+  .estimate-mini-list h3 {
+    font-size:15px;
+  }
+
+  /* Qualidade */
+  .quality-title {
+    font-size:23px;
+  }
+  .quality-kicker {
+    font-size:11px;
+  }
+
+  /* Erros mais comuns — principal ponto de correção */
+  .error-card h3 {
+    font-size:18px;
+    margin-bottom: 14px;
+  }
+  .error-card li {
+    font-size:15px;
+    line-height: 1.5;
+    margin-bottom: 11px;
+  }
+
+  /* Bloqueios */
+  .blocker-step {
+    font-size:15px;
+  }
+
+  /* Indicadores */
+  .metric-frequency {
+    font-size:12px;
+  }
+
+  /* Labels e metadados continuam menores por função visual */
+  .slide-label,
+  .board-flow-kicker,
+  .quality-kicker,
+  .value-flow-tag,
+  .usage-label {
+    letter-spacing: .10em;
+  }
+}
+
+
+/* SLIDE 08 — PROTÓTIPO APROVADO */
+
+  :root{
+    --blue:#0245B5;
+    --blue-dark:#01307E;
+    --blue-soft:#EBF1FB;
+    --green-soft:#E8F7EF;
+    --green:#1A5C3A;
+    --yellow:#FFD100;
+    --orange:#F96B08;
+    --orange-soft:#FFF2E8;
+    --bg:#F6F6F3;
+    --surface:#FFFFFF;
+    --border:#E4E4DE;
+    --text:#0D0D0D;
+    --text-mid:#4A4A4A;
+    --text-soft:#7A7A72;
+    --font:'Nunito','Segoe UI',Arial,sans-serif;
+  }
+
+  *{box-sizing:border-box}
+  body{
+    margin:0;
+    background:var(--bg);
+    color:var(--text);
+    font-family:var(--font);
+  }
+
+  .page{
+    min-height:100vh;
+    padding:44px 54px 54px;
+    max-width:1400px;
+    margin:auto;
+  }
+
+  .label{
+    font-size:11px;
+    font-weight:800;
+    letter-spacing:.14em;
+    color:var(--blue);
+    text-transform:uppercase;
+    margin-bottom:14px;
+  }
+.page h1{
+    font-size:51px;
+    line-height:1.05;
+    margin:0 0 12px;
+    letter-spacing:-.02em;
+  }
+
+  .subtitle{
+    font-size:18px;
+    line-height:1.5;
+    color:var(--text-mid);
+    margin-bottom:34px;
+  }
+
+  .journey{
+    position:relative;
+    display:grid;
+    grid-template-columns:1fr 1fr 1fr;
+    align-items:center;
+    gap:46px;
+    margin-top:12px;
+  }
+
+  .node{
+    background:var(--surface);
+    border:1px solid var(--border);
+    border-radius:18px;
+    padding:26px;
+    min-height:250px;
+    position:relative;
+    z-index:2;
+    box-shadow:0 2px 0 rgba(0,0,0,.02);
+  }
+
+  .node.prd{border-top:5px solid var(--blue)}
+  .node.dev{border-top:5px solid var(--green)}
+
+  .node-kicker{
+    font-size:11px;
+    font-weight:800;
+    letter-spacing:.12em;
+    text-transform:uppercase;
+    color:var(--text-soft);
+    margin-bottom:8px;
+  }
+
+  .node-title{
+    font-size:24px;
+    font-weight:800;
+    margin-bottom:8px;
+  }
+
+  .node.prd .node-title{color:var(--blue-dark)}
+  .node.dev .node-title{color:var(--green)}
+
+  .node-desc{
+    font-size:15px;
+    line-height:1.5;
+    color:var(--text-mid);
+    margin-bottom:18px;
+  }
+
+  .status-list{
+    display:flex;
+    flex-wrap:wrap;
+    gap:8px;
+  }
+
+  .chip{
+    font-size:13px;
+    font-weight:700;
+    padding:8px 11px;
+    border-radius:999px;
+    background:#fff;
+    border:1px solid var(--border);
+  }
+
+  .prd .chip{
+    background:var(--blue-soft);
+    border-color:#C8D7F2;
+    color:var(--blue-dark);
+  }
+
+  .dev .chip{
+    background:var(--green-soft);
+    border-color:#CFE8D8;
+    color:var(--green);
+  }
+
+  .done{
+    background:var(--orange-soft)!important;
+    border-color:#FFD1B8!important;
+    color:var(--orange)!important;
+  }
+
+  .arrow{
+    position:absolute;
+    top:50%;
+    height:4px;
+    background:var(--blue);
+    z-index:1;
+  }
+
+  .arrow.forward{
+    left:30%;
+    width:20%;
+    transform:translateY(-42px);
+  }
+
+  .arrow.return{
+    right:30%;
+    width:20%;
+    transform:translateY(42px);
+    background:var(--orange);
+  }
+
+  .arrow.forward::after,
+  .arrow.return::after{
+    content:'';
+    position:absolute;
+    top:50%;
+    width:12px;
+    height:12px;
+    border-top:4px solid currentColor;
+    border-right:4px solid currentColor;
+  }
+
+  .arrow.forward{
+    color:var(--blue);
+  }
+
+  .arrow.forward::after{
+    right:-2px;
+    transform:translateY(-50%) rotate(45deg);
+  }
+
+  .arrow.return{
+    color:var(--orange);
+  }
+
+  .arrow.return::after{
+    left:-2px;
+    transform:translateY(-50%) rotate(-135deg);
+  }
+
+  .arrow-label{
+    position:absolute;
+    z-index:3;
+    background:var(--bg);
+    padding:4px 10px;
+    border-radius:999px;
+    font-size:12px;
+    font-weight:800;
+    white-space:nowrap;
+  }
+
+  .forward-label{
+    left:35%;
+    top:calc(50% - 76px);
+    color:var(--blue);
+  }
+
+  .return-label{
+    right:32%;
+    top:calc(50% + 52px);
+    color:var(--orange);
+  }
+
+  .message{
+    margin-top:30px;
+    background:var(--blue-soft);
+    border-left:5px solid var(--blue);
+    border-radius:8px;
+    padding:18px 22px;
+    font-size:17px;
+    line-height:1.55;
+    color:var(--blue-dark);
+    font-weight:700;
+    text-align:center;
+  }
+
+  .legend{
+    margin-top:18px;
+    display:flex;
+    justify-content:center;
+    gap:22px;
+    flex-wrap:wrap;
+    color:var(--text-soft);
+    font-size:13px;
+  }
+
+  .legend span{
+    display:flex;
+    align-items:center;
+    gap:8px;
+  }
+
+  .dot{
+    width:10px;
+    height:10px;
+    border-radius:50%;
+  }
+
+  .dot.blue{background:var(--blue)}
+  .dot.green{background:var(--green)}
+  .dot.orange{background:var(--orange)}
+
+  @media (max-width:1000px){
+    .journey{
+      grid-template-columns:1fr;
+      gap:22px;
+    }
+    .arrow,.arrow-label{display:none}
+.page h1{font-size:39px}
+  }
+
+  .endtoend{
+    margin-top:34px;
+    background:var(--surface);
+    border:1px solid var(--border);
+    border-radius:18px;
+    padding:26px 28px 30px;
+  }
+
+  .endtoend-head{
+    display:flex;
+    align-items:flex-start;
+    justify-content:space-between;
+    gap:24px;
+    margin-bottom:24px;
+  }
+
+  .endtoend-kicker{
+    font-size:11px;
+    font-weight:800;
+    letter-spacing:.12em;
+    text-transform:uppercase;
+    color:var(--blue);
+    margin-bottom:6px;
+  }
+
+  .endtoend-title{
+    font-size:25px;
+    font-weight:800;
+    color:var(--text);
+    margin-bottom:6px;
+  }
+
+  .endtoend-desc{
+    font-size:15px;
+    line-height:1.5;
+    color:var(--text-mid);
+    max-width:780px;
+  }
+
+  .e2e-flow{
+    display:grid;
+    grid-template-columns:repeat(7, minmax(120px, 1fr));
+    gap:10px;
+    align-items:stretch;
+    position:relative;
+  }
+
+  .e2e-step{
+    position:relative;
+    border-radius:14px;
+    padding:18px 14px;
+    min-height:148px;
+    border:1px solid var(--border);
+    display:flex;
+    flex-direction:column;
+    justify-content:flex-start;
+    background:#fff;
+  }
+
+  .e2e-step:not(:last-child)::after{
+    content:'→';
+    position:absolute;
+    right:-15px;
+    top:50%;
+    transform:translateY(-50%);
+    font-size:17px;
+    font-weight:900;
+    color:var(--text-soft);
+    z-index:3;
+  }
+
+  .e2e-step.prd{
+    background:var(--blue-soft);
+    border-color:#C8D7F2;
+  }
+
+  .e2e-step.dev{
+    background:var(--green-soft);
+    border-color:#CFE8D8;
+  }
+
+  .e2e-step.finish{
+    background:var(--orange-soft);
+    border-color:#FFD1B8;
+  }
+
+  .e2e-step-num{
+    width:28px;
+    height:28px;
+    border-radius:50%;
+    background:#fff;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    font-size:11px;
+    font-weight:800;
+    margin-bottom:12px;
+    border:1px solid var(--border);
+  }
+
+  .e2e-step-board{
+    font-size:10px;
+    font-weight:800;
+    letter-spacing:.08em;
+    text-transform:uppercase;
+    color:var(--text-soft);
+    margin-bottom:5px;
+  }
+
+  .e2e-step-title{
+    font-size:16px;
+    font-weight:800;
+    line-height:1.25;
+    margin-bottom:8px;
+  }
+
+  .e2e-step-desc{
+    font-size:13px;
+    line-height:1.4;
+    color:var(--text-mid);
+  }
+
+  .e2e-return{
+    margin-top:20px;
+    display:grid;
+    grid-template-columns:1fr auto 1fr;
+    gap:14px;
+    align-items:center;
+  }
+
+  .e2e-return-line{
+    height:3px;
+    background:var(--orange);
+    border-radius:999px;
+  }
+
+  .e2e-return-label{
+    font-size:12px;
+    font-weight:800;
+    color:var(--orange);
+    background:var(--orange-soft);
+    border:1px solid #FFD1B8;
+    border-radius:999px;
+    padding:7px 14px;
+    white-space:nowrap;
+  }
+
+  .e2e-note{
+    margin-top:18px;
+    font-size:14px;
+    line-height:1.5;
+    color:var(--text-mid);
+    text-align:center;
+  }
+
+  @media (max-width:1100px){
+    .e2e-flow{
+      grid-template-columns:1fr;
+    }
+    .e2e-step:not(:last-child)::after{
+      content:'↓';
+      right:auto;
+      left:50%;
+      top:auto;
+      bottom:-19px;
+      transform:translateX(-50%);
+    }
+    .e2e-return{display:none}
+  }
+
+
+/* =========================================================
+   REFINO FINAL DE LAYOUT, HIERARQUIA E LEGIBILIDADE
+   ========================================================= */
+.page{
+  padding:42px 48px 54px;
+  max-width:1440px;
+}
+
+.label{
+  margin-bottom:12px;
+}
+.page h1{
+  font-size:49px;
+  margin-bottom:10px;
+}
+
+.subtitle{
+  max-width:980px;
+  margin-bottom:30px;
+  font-size:17px;
+  line-height:1.5;
+}
+
+.journey{
+  gap:34px;
+  margin-top:8px;
+}
+
+.node{
+  min-height:270px;
+  padding:24px 24px 22px;
+  display:flex;
+  flex-direction:column;
+}
+
+.node-kicker{
+  margin-bottom:6px;
+}
+
+.node-title{
+  font-size:22px;
+  line-height:1.22;
+  min-height:56px;
+  margin-bottom:10px;
+}
+
+.node-desc{
+  font-size:15px;
+  line-height:1.52;
+  min-height:72px;
+  margin-bottom:16px;
+}
+
+.status-list{
+  margin-top:auto;
+}
+
+.chip{
+  font-size:12px;
+  line-height:1.25;
+  padding:8px 10px;
+}
+
+.forward-label,
+.return-label{
+  font-size:11px;
+  padding:4px 9px;
+}
+
+.message{
+  margin-top:26px;
+  font-size:16px;
+  padding:16px 20px;
+}
+
+.endtoend{
+  margin-top:28px;
+  padding:24px 24px 26px;
+}
+
+.endtoend-head{
+  margin-bottom:20px;
+}
+
+.endtoend-title{
+  font-size:23px;
+  margin-bottom:6px;
+}
+
+.endtoend-desc{
+  font-size:14.5px;
+  line-height:1.5;
+  max-width:900px;
+}
+
+.e2e-flow{
+  grid-template-columns:repeat(7, minmax(0, 1fr));
+  gap:8px;
+}
+
+.e2e-step{
+  min-height:178px;
+  padding:16px 12px 15px;
+}
+
+.e2e-step-num{
+  margin-bottom:10px;
+}
+
+.e2e-step-board{
+  font-size:9px;
+  margin-bottom:5px;
+}
+
+.e2e-step-title{
+  font-size:15px;
+  line-height:1.24;
+  min-height:40px;
+  margin-bottom:8px;
+}
+
+.e2e-step-desc{
+  font-size:12.5px;
+  line-height:1.42;
+}
+
+.e2e-return{
+  margin-top:18px;
+}
+
+.e2e-return-label{
+  font-size:11px;
+  padding:6px 12px;
+}
+
+.e2e-note{
+  margin-top:16px;
+  font-size:13px;
+  line-height:1.5;
+}
+
+.legend{
+  margin-top:16px;
+  gap:18px;
+  font-size:12px;
+}
+
+/* evita que textos longos estourem e melhora equilíbrio visual */
+.node-title,
+.node-desc,
+.endtoend-desc,
+.e2e-step-title,
+.e2e-step-desc,
+.message{
+  overflow-wrap:anywhere;
+}
+
+/* Melhor comportamento em telas intermediárias */
+@media (max-width:1250px){
+  .page{padding:36px 34px 48px}
+.page h1{font-size:45px}
+  .journey{gap:24px}
+  .node{min-height:290px}
+  .node-title{font-size:20px}
+  .chip{font-size:11.5px}
+  .e2e-step{min-height:190px}
+  .e2e-step-title{font-size:14px}
+  .e2e-step-desc{font-size:12px}
+}
+
+@media (max-width:1100px){
+  .page{padding:32px 28px 44px}
+  .subtitle{font-size:16px}
+  .journey{
+    grid-template-columns:1fr;
+    gap:18px;
+  }
+  .node{
+    min-height:auto;
+  }
+  .node-title,
+  .node-desc{
+    min-height:auto;
+  }
+  .arrow,.arrow-label{display:none}
+  .e2e-flow{grid-template-columns:1fr}
+  .e2e-step{
+    min-height:auto;
+  }
+  .e2e-step-title{
+    min-height:auto;
+  }
+}
+
+@media (max-width:640px){
+  .page{padding:24px 18px 36px}
+.page h1{font-size:35px}
+  .subtitle{font-size:15px}
+  .node{padding:20px}
+  .node-title{font-size:19px}
+  .endtoend{padding:20px}
+}
+
+
+/* =========================================================
+   REFINO V2 — correções de quebra, disposição e setas
+   ========================================================= */
+
+/* Blocos superiores: mais largura útil e títulos sem quebras ruins */
+.journey{
+  grid-template-columns: 1fr 1.08fr 1fr;
+  gap: 42px;
+}
+
+.node{
+  min-width: 0;
+  overflow: visible;
+}
+
+.node-title{
+  font-size:21px;
+  line-height: 1.22;
+  min-height: 54px;
+  overflow-wrap: normal;
+  word-break: normal;
+  hyphens: none;
+}
+
+.node-desc{
+  overflow-wrap: normal;
+  word-break: normal;
+  hyphens: none;
+}
+
+/* Setas ficam no espaço ENTRE os cards, sem atravessar conteúdo */
+.arrow.forward{
+  left: 31.8%;
+  width: 5.4%;
+  transform: translateY(-18px);
+}
+.arrow.return{
+  right: 31.8%;
+  width: 5.4%;
+  transform: translateY(18px);
+}
+
+.forward-label{
+  left: 33.35%;
+  top: calc(50% - 54px);
+  transform: translateX(-50%);
+}
+
+.return-label{
+  right: 33.35%;
+  top: calc(50% + 28px);
+  transform: translateX(50%);
+}
+
+/* End to End: impede palavras quebradas no meio */
+.e2e-step,
+.e2e-step-title,
+.e2e-step-desc{
+  overflow-wrap: normal;
+  word-break: normal;
+  hyphens: none;
+}
+
+.e2e-step-title{
+  font-size:14.5px;
+  line-height: 1.25;
+  min-height: 40px;
+}
+
+/* Desenvolvimento precisa de um pouco mais de espaço visual */
+.e2e-step:nth-child(3) .e2e-step-title{
+  font-size:13.5px;
+  letter-spacing: -0.01em;
+}
+
+/* Descrição superior mais curta visualmente */
+.endtoend-desc{
+  max-width: 1040px;
+}
+
+/* Em telas menores, evita compressão antes de empilhar */
+@media (max-width: 1280px){
+  .journey{
+    grid-template-columns: 1fr 1.12fr 1fr;
+    gap: 34px;
+  }
+  .node-title{
+    font-size:19px;
+  }
+  .arrow.forward{
+    left: 31.5%;
+    width: 5.2%;
+  }
+  .arrow.return{
+    right: 31.5%;
+    width: 5.2%;
+  }
+}
+
+@media (max-width: 1100px){
+  .journey{grid-template-columns:1fr}
+  .node-title{font-size:20px}
+}
+
+
+/* =========================================================
+   REFINO V3 — visão superior limpa, sem setas sobrepostas
+   ========================================================= */
+.journey{
+  gap: 50px;
+}
+
+.node{
+  min-height: 270px;
+}
+
+.node::after{
+  content:'';
+  position:absolute;
+  top:50%;
+  right:-32px;
+  width:14px;
+  height:14px;
+  border-top:3px solid var(--text-soft);
+  border-right:3px solid var(--text-soft);
+  transform:translateY(-50%) rotate(45deg);
+  opacity:.45;
+}
+
+.node:last-of-type::after{
+  display:none;
+}
+
+@media (max-width:1100px){
+  .node::after{
+    display:none;
+  }
+}
+
+
+.page{
+  min-height:auto;
+  width:100%;
+}
+#slide-12, #slide-13{
+  overflow:hidden;
+}
+
+
+/* =========================================================
+   REVISÃO FINAL — acessibilidade e consistência de layout
+   ========================================================= */
+.sr-only{
+  position:absolute !important;
+  width:1px !important;
+  height:1px !important;
+  padding:0 !important;
+  margin:-1px !important;
+  overflow:hidden !important;
+  clip:rect(0,0,0,0) !important;
+  white-space:nowrap !important;
+  border:0 !important;
+}
+
+/* Slide 07: reduz apenas respiros excedentes para evitar rolagem residual. */
+#slide-9 .slide-content{
+  padding-top:42px;
+  padding-bottom:42px;
+}
+#slide-9 .value-flow-grid{
+  margin-top:18px;
+}
+#slide-9 .value-flow-insight{
+  margin-top:18px;
+}
+
+/* Slide 13: mantém fonte legível e compacta somente o espaçamento vertical. */
+#slide-19 .slide-content, #slide-20 .slide-content{
+  padding-top:38px;
+  padding-bottom:38px;
+}
+#slide-19 .slide-subtitle, #slide-20 .slide-subtitle{
+  margin-bottom:22px;
+}
+.metrics-list{
+  margin-top:20px;
+  gap:8px;
+}
+.metric-row{
+  padding:14px 20px;
+}
+.metric-body h3{
+  margin-bottom:2px;
+}
+
+
+/* ===== V6: encaixe sem rolagem (18 slides) ===== */
+.slide-content { padding: 30px 64px 26px; }
+.page { padding: 30px 64px 26px; }
+.roles-card-grid { margin-top: 20px; }
+.ceremony-card-grid { margin-top: 20px; }
+.role-card { min-height: 0; }
+
+/* ===== V7: preenchimento consistente em todos os slides (padrão do slide 8) ===== */
+.slide-content { display: flex; flex-direction: column; }
+
+/* o bloco principal de cada slide cresce para ocupar a altura disponível */
+.slide-content > .section-grid,
+.slide-content > .roles-card-grid,
+.slide-content > .ceremony-card-grid,
+.slide-content > .value-context-grid,
+.slide-content > .value-flow-grid,
+.slide-content > .estimate-grid,
+.slide-content > .quality-grid,
+.slide-content > .error-card-grid,
+.slide-content > .topic-grid,
+.slide-content > .reality-grid,
+.slide-content > .blocker-examples-grid,
+.page > .journey {
+  flex: 1 1 auto;
+  min-height: 0;
+  align-content: stretch;
+  grid-auto-rows: 1fr;
+}
+
+/* listas em coluna (métricas) distribuem as linhas igualmente */
+.slide-content > .metrics-list { flex: 1 1 auto; min-height: 0; justify-content: space-between; }
+
+/* cartões podem esticar sem estourar */
+.roles-card-grid > *, .ceremony-card-grid > *, .value-flow-grid > *,
+.value-context-grid > *, .estimate-grid > *, .quality-grid > *,
+.error-card-grid > *, .topic-grid > *, .reality-grid > *,
+.section-grid > *, .blocker-examples-grid > *, .journey > * { min-height: 0; }
+
+/* ===== V8: fonte -1, espacos apertados, boards/e2e preenchem a altura ===== */
+.slide-content { padding: 22px 60px 18px; }
+.page { padding: 22px 60px 18px; display: flex; flex-direction: column; }
+.slide-h1 { margin-bottom: 6px; }
+.slide-subtitle { margin-bottom: 14px; }
+.page h1 { margin-bottom: 6px; }
+.page .subtitle { margin-bottom: 14px; }
+
+.roles-card-grid, .ceremony-card-grid { margin-top: 14px; }
+.role-card { padding: 16px 16px; }
+.role-card-icon { margin-bottom: 8px; }
+.role-card-subtitle { margin-bottom: 8px; }
+.role-card li { margin-bottom: 4px; }
+.ceremony-card-body li { margin-bottom: 4px; }
+
+.value-timeline { margin: 14px 0 12px; }
+.value-step { min-height: 0; padding: 14px 12px; }
+.value-context-grid { margin-top: 12px; }
+.value-context-card { padding: 16px 18px; }
+
+.section-grid { margin-top: 14px; gap: 16px; }
+.section-box { padding: 18px 20px; }
+
+.metrics-list { gap: 8px; }
+.metric-row { padding: 12px 18px; }
+
+.value-flow-card { padding: 18px; }
+.value-flow-card ul li { padding: 3px 0 3px 18px; }
+.value-flow-objective { padding: 12px 14px; }
+
+.page > .journey { flex: 1 1 auto; min-height: 0; }
+.page > .endtoend { flex: 1 1 auto; min-height: 0; display: flex; flex-direction: column; }
+.endtoend > .e2e-flow { flex: 1 1 auto; }
+.node { min-height: 0; }
+.message { margin-top: 14px; }
+
+.quality-card-header { padding: 16px 18px; }
+.quality-list { padding: 12px 18px; }
+.quality-list li { margin-bottom: 6px; }
+.blocker-flow { margin: 10px 0 12px; }
+.blocker-step { padding: 12px 14px; }
+.blocker-card { padding: 14px 16px; }
+.blocker-examples-grid { margin-top: 10px; gap: 12px; }
+.topic-grid { margin-top: 12px; }
+.topic-card { padding: 16px 18px; }
+.error-card-grid { margin-top: 12px; }
+
+/* ===== V9: ajustes finais (slides 9, 12, 13, 16/17) ===== */
+
+/* Slide 9: Objetivo como post-it (azul no Upstream, laranja no Downstream) + encaixe */
+.upstream .value-flow-objective { background: var(--blue-soft); border: 1px solid #C7DBF5; }
+.upstream .value-flow-objective strong { color: var(--blue); }
+.downstream .value-flow-objective { background: var(--orange-soft); border: 1px solid #FBD3B4; }
+.downstream .value-flow-objective strong { color: var(--orange); }
+.value-flow-objective { padding: 12px 14px; }
+#slide-9 .slide-content { padding-top: 16px; padding-bottom: 12px; }
+#slide-9 .slide-subtitle { margin-bottom: 10px; }
+#slide-9 .value-flow-card { padding: 16px; }
+#slide-9 .value-flow-card > p { margin-bottom: 8px; }
+#slide-9 .value-flow-card ul { margin-bottom: 10px; }
+#slide-9 .value-flow-card ul li { padding: 2px 0 2px 18px; }
+#slide-9 .value-flow-insight { margin-top: 14px; padding: 12px 16px; }
+
+/* Slide 12: estimativas menores para caber tudo na mesma página */
+#slide-14 .estimate-grid { gap: 10px; margin-top: 14px; }
+#slide-14 .estimate-card { min-height: 0; padding: 12px 12px; }
+#slide-14 .estimate-number { font-size: 26px; margin-bottom: 6px; }
+#slide-14 .estimate-label { margin-top: 8px; font-size: 13px; line-height: 1.4; }
+#slide-14 .estimate-rule-title { margin-top: 0; }
+#slide-14 .estimate-insight { margin-top: 12px; gap: 14px; }
+#slide-14 .estimate-insight-card, #slide-14 .estimate-mini-list { padding: 14px 16px; }
+
+/* Slide 13: cada checklist em 2 colunas + header sem espaço morto */
+#slide-15 .quality-card-header { height: auto; min-height: 0; padding: 16px 20px; }
+#slide-15 .quality-title { min-height: 0; }
+#slide-15 .quality-desc { min-height: 0; margin-top: 8px; }
+#slide-15 .quality-list { display: grid; grid-template-columns: 1fr 1fr; column-gap: 22px; row-gap: 6px; padding: 16px 20px; }
+
+/* Slides 16 e 17: mesmo espaçamento entre as métricas (padrão consistente) */
+.slide-content > .metrics-list { flex: 0 0 auto; justify-content: flex-start; gap: 12px; }
+.slide-content > .metrics-list .metric-row { flex: 0 0 auto; }
+
+/* ===== V10: slide 13 sobe as caixas, slide 9 encaixe fino, slide 15 exemplos ===== */
+#slide-15 .slide-content { padding-top: 16px; padding-bottom: 12px; }
+#slide-15 .slide-subtitle { margin-bottom: 10px; }
+#slide-15 .quality-grid { margin-top: 12px; }
+#slide-15 .quality-insight { margin-top: 12px; }
+
+#slide-9 .slide-h1 { margin-bottom: 4px; }
+#slide-9 .slide-subtitle { margin-bottom: 8px; }
+#slide-9 .value-flow-card > p { margin-bottom: 6px; }
+#slide-9 .value-flow-card ul { margin-bottom: 8px; }
+#slide-9 .value-flow-card ul li { padding: 1px 0 1px 18px; }
+#slide-9 .value-flow-objective { padding: 10px 12px; }
+#slide-9 .value-flow-insight { margin-top: 10px; }
+
+#slide-17 .blocker-examples-grid { margin-top: 14px; }
+
+/* ===== V11: slides do prompt (histórias) ===== */
+.section-box .status-list { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 4px; }
+#slide-10 .section-box .chip { font-size: 13px; }
+#slide-10 .slide-content, #slide-11 .slide-content { padding-top: 20px; padding-bottom: 16px; }
+
+/* ===== V12: slide 17 encaixe, slide 16 distribuir, slide 10 caixas menores ===== */
+
+/* Slide 17 (Jira): compacta para os 6 passos caberem */
+#slide-17 .slide-content { padding-top: 16px; padding-bottom: 12px; }
+#slide-17 .slide-h1 { margin-bottom: 4px; }
+#slide-17 .slide-subtitle { margin-bottom: 12px; }
+#slide-17 .metrics-list { gap: 8px; }
+#slide-17 .metric-row { padding: 9px 18px; }
+
+/* Slide 16 (bloqueios): distribui melhor na página */
+#slide-16 .blocker-flow { margin: 26px 0 24px; }
+#slide-16 .blocker-step { padding: 20px 16px; }
+#slide-16 .blocker-rule { flex: 1 1 auto; min-height: 0; align-content: stretch; grid-auto-rows: 1fr; margin-top: 22px; }
+#slide-16 .blocker-rule-card { display: flex; flex-direction: column; justify-content: center; }
+
+/* Slide 10 (prompt): caixas do tamanho do conteúdo, insight no rodapé */
+#slide-10 .section-grid { flex: 0 0 auto; grid-auto-rows: auto; margin-top: 18px; }
+#slide-10 .section-box { padding: 22px 24px; }
+#slide-10 .insight { margin-top: auto; }
 </style>
 </head>
 <body>
@@ -962,15 +2097,14 @@ header button {
   </div>
   <div class="nav-row">
     <button class="nav-btn" id="prev-btn" onclick="navigate(-1)" aria-label="Slide anterior" disabled>← Anterior</button>
-    <span class="slide-counter" id="counter" aria-live="polite" aria-atomic="true">1 / 16</span>
+    <span class="slide-counter" id="counter" aria-live="polite" aria-atomic="true">1 / 23</span>
     <button class="nav-btn primary" id="next-btn" onclick="navigate(1)" aria-label="Próximo slide">Próximo →</button>
   </div>
 </header>
-<div class="progress-track"><div class="progress-fill" id="progress" style="width: 6.25%"></div></div>
+<div class="progress-track"><div class="progress-fill" id="progress" style="width: 5%"></div></div>
 
 <main role="main" aria-label="Conteúdo do onboarding">
 
-<!-- 01 CAPA -->
 <section class="slide active slide-cover" id="slide-1">
   <div class="cover-shape cover-shape-1"></div>
   <div class="cover-shape cover-shape-2"></div>
@@ -995,7 +2129,6 @@ header button {
   </div>
 </section>
 
-<!-- 02 CHAPTER DE AGILIDADE -->
 <section class="slide" id="slide-2">
   <div class="slide-content">
     <div class="slide-label">02 · Chapter</div>
@@ -1024,7 +2157,6 @@ header button {
   </div>
 </section>
 
-<!-- 03 O QUE VOCÊ VAI ENCONTRAR -->
 <section class="slide" id="slide-3">
   <div class="slide-content">
     <div class="slide-label">03 · Introdução</div>
@@ -1044,15 +2176,13 @@ header button {
   </div>
 </section>
 
-<!-- 04 PAPÉIS -->
 <section class="slide" id="slide-4">
   <div class="slide-content">
     <div class="slide-label">04 · Organização</div>
     <h1 class="slide-h1">Papéis</h1>
-    <p class="slide-subtitle">Entenda como cada papel contribui para o fluxo, desde a descoberta até a entrega de valor.</p>
-
+    <p class="slide-subtitle">Como cada papel contribui para o fluxo — produto e liderança.</p>
     <div class="roles-card-grid">
-      <div class="role-card">
+        <div class="role-card">
         <div class="role-card-icon">🎯</div>
         <div class="role-card-title">PM</div>
         <div class="role-card-subtitle">Valor e priorização</div>
@@ -1062,8 +2192,7 @@ header button {
           <li>Direcionar produto</li>
         </ul>
       </div>
-
-      <div class="role-card">
+        <div class="role-card">
         <div class="role-card-icon">📋</div>
         <div class="role-card-title">PO</div>
         <div class="role-card-subtitle">Requisitos</div>
@@ -1073,8 +2202,7 @@ header button {
           <li>Garantir entendimento</li>
         </ul>
       </div>
-
-      <div class="role-card">
+        <div class="role-card">
         <div class="role-card-icon">👥</div>
         <div class="role-card-title">TM</div>
         <div class="role-card-subtitle">Gestão do time</div>
@@ -1084,8 +2212,7 @@ header button {
           <li>Desenvolver pessoas</li>
         </ul>
       </div>
-
-      <div class="role-card">
+        <div class="role-card">
         <div class="role-card-icon">⚙️</div>
         <div class="role-card-title">TL</div>
         <div class="role-card-subtitle">Liderança técnica</div>
@@ -1095,8 +2222,17 @@ header button {
           <li>Garantir arquitetura</li>
         </ul>
       </div>
+    </div>
+  </div>
+</section>
 
-      <div class="role-card">
+<section class="slide" id="slide-5">
+  <div class="slide-content">
+    <div class="slide-label">05 · Organização</div>
+    <h1 class="slide-h1">Papéis</h1>
+    <p class="slide-subtitle">Como cada papel contribui para o fluxo — execução, qualidade e melhoria contínua.</p>
+    <div class="roles-card-grid">
+        <div class="role-card">
         <div class="role-card-icon">💻</div>
         <div class="role-card-title">DEV</div>
         <div class="role-card-subtitle">Construção</div>
@@ -1106,8 +2242,7 @@ header button {
           <li>Participar dos refinamentos</li>
         </ul>
       </div>
-
-      <div class="role-card">
+        <div class="role-card">
         <div class="role-card-icon">🔍</div>
         <div class="role-card-title">QA</div>
         <div class="role-card-subtitle">Qualidade</div>
@@ -1117,8 +2252,7 @@ header button {
           <li>Apoiar homologação</li>
         </ul>
       </div>
-
-      <div class="role-card">
+        <div class="role-card">
         <div class="role-card-icon">🎨</div>
         <div class="role-card-title">Design</div>
         <div class="role-card-subtitle">Experiência</div>
@@ -1128,8 +2262,7 @@ header button {
           <li>Apoiar descoberta</li>
         </ul>
       </div>
-
-      <div class="role-card">
+        <div class="role-card">
         <div class="role-card-icon">📈</div>
         <div class="role-card-title">Agilidade</div>
         <div class="role-card-subtitle">Fluxo e melhoria contínua</div>
@@ -1143,15 +2276,13 @@ header button {
   </div>
 </section>
 
-<!-- 05 CERIMÔNIAS -->
-<section class="slide" id="slide-5">
+<section class="slide" id="slide-6">
   <div class="slide-content">
-    <div class="slide-label">05 · Cadência</div>
+    <div class="slide-label">06 · Cadência</div>
     <h1 class="slide-h1">Como cada rito funciona</h1>
-    <p class="slide-subtitle">Além do objetivo, cada cerimônia precisa deixar uma saída clara para o fluxo continuar.</p>
-
+    <p class="slide-subtitle">Ritos de execução e refinamento — cada um com uma saída clara para o fluxo continuar.</p>
     <div class="ceremony-card-grid">
-      <div class="ceremony-card">
+        <div class="ceremony-card">
         <div class="ceremony-card-head">
           <div class="ceremony-card-title">Daily</div>
           <div class="ceremony-card-meta">15 min • Time</div>
@@ -1165,8 +2296,7 @@ header button {
           </ul>
         </div>
       </div>
-
-      <div class="ceremony-card">
+        <div class="ceremony-card">
         <div class="ceremony-card-head">
           <div class="ceremony-card-title">Refinamento de Negócio</div>
           <div class="ceremony-card-meta">1–2h • Time</div>
@@ -1180,8 +2310,7 @@ header button {
           </ul>
         </div>
       </div>
-
-      <div class="ceremony-card">
+        <div class="ceremony-card">
         <div class="ceremony-card-head">
           <div class="ceremony-card-title">Refinamento Técnico</div>
           <div class="ceremony-card-meta">1–2h • Time Tech</div>
@@ -1195,8 +2324,17 @@ header button {
           </ul>
         </div>
       </div>
+    </div>
+  </div>
+</section>
 
-      <div class="ceremony-card">
+<section class="slide" id="slide-7">
+  <div class="slide-content">
+    <div class="slide-label">07 · Cadência</div>
+    <h1 class="slide-h1">Como cada rito funciona</h1>
+    <p class="slide-subtitle">Ritos de planejamento e melhoria — cada um com uma saída clara para o fluxo continuar.</p>
+    <div class="ceremony-card-grid">
+        <div class="ceremony-card">
         <div class="ceremony-card-head">
           <div class="ceremony-card-title">Planning</div>
           <div class="ceremony-card-meta">1–2h • Time</div>
@@ -1210,8 +2348,7 @@ header button {
           </ul>
         </div>
       </div>
-
-      <div class="ceremony-card">
+        <div class="ceremony-card">
         <div class="ceremony-card-head">
           <div class="ceremony-card-title">Review</div>
           <div class="ceremony-card-meta">1–2h • Time + Stakeholders</div>
@@ -1225,8 +2362,7 @@ header button {
           </ul>
         </div>
       </div>
-
-      <div class="ceremony-card">
+        <div class="ceremony-card">
         <div class="ceremony-card-head">
           <div class="ceremony-card-title">Retrospectiva</div>
           <div class="ceremony-card-meta">1–2h • Time</div>
@@ -1244,10 +2380,9 @@ header button {
   </div>
 </section>
 
-<!-- 06 DA INICIATIVA À ENTREGA -->
-<section class="slide" id="slide-6">
+<section class="slide" id="slide-8">
   <div class="slide-content">
-    <div class="slide-label">06 · Estrutura</div>
+    <div class="slide-label">08 · Estrutura</div>
     <h1 class="slide-h1">Da iniciativa à entrega de valor</h1>
     <p class="slide-subtitle">Toda entrega deve estar conectada a um objetivo maior. Nosso modelo garante rastreabilidade entre estratégia, planejamento e execução.</p>
 
@@ -1296,10 +2431,9 @@ header button {
   </div>
 </section>
 
-<!-- 07 POR QUE NOSSO FLUXO EXISTE -->
-<section class="slide" id="slide-7">
+<section class="slide" id="slide-9">
   <div class="slide-content">
-    <div class="slide-label">07 · Fluxo de Trabalho</div>
+    <div class="slide-label">09 · Fluxo de Trabalho</div>
     <h1 class="slide-h1">Como uma iniciativa gera valor</h1>
     <p class="slide-subtitle">
       Nosso fluxo de trabalho é dividido em duas grandes etapas: preparar para construir e construir para entregar valor.
@@ -1352,85 +2486,196 @@ header button {
   </div>
 </section>
 
-<!-- 08 BOARDS E STATUS -->
-<section class="slide" id="slide-8">
+<section class="slide" id="slide-10">
   <div class="slide-content">
-    <div class="slide-label">08 · Fluxo</div>
-    <h1 class="slide-h1">Boards e status</h1>
-    <p class="slide-subtitle">Como o trabalho flui entre preparação, execução técnica e entrega.</p>
-
-    <div class="board-flow-wrap">
-      <div class="board-flow-card">
-        <div class="board-flow-head prd">
-          <div class="board-flow-title">
-            <span class="board-flow-kicker">Board PRD</span>
-            <span class="board-flow-name">Preparação e refinamento</span>
-          </div>
-          <p class="board-flow-desc">Gestão do processo da ideia ao refinamento. Aqui ficam iniciativas, épicos e histórias/bugs enquanto estão sendo preparados para desenvolvimento.</p>
-        </div>
-        <div class="board-status-row">
-          <span class="status-chip prd">Backlog</span>
-          <span class="status-arrow">→</span>
-          <span class="status-chip prd">Pronto para Refinar</span>
-          <span class="status-arrow">→</span>
-          <span class="status-chip prd">Refinamento de Negócio</span>
-          <span class="status-arrow">→</span>
-          <span class="status-chip prd">Refinamento Técnico</span>
-        </div>
+    <div class="slide-label">10 · Histórias</div>
+    <h1 class="slide-h1">Validação de Histórias de Usuário</h1>
+    <p class="slide-subtitle">Uma boa história descreve o valor a entregar e o comportamento esperado do usuário — não como a solução será feita. O prompt (Rovo · PM EXPERT) avalia isso na origem.</p>
+    <div class="section-grid">
+      <div class="section-box">
+        <h3>O que o prompt garante</h3>
+        <ul class="bullet-list">
+          <li>Escrita a partir do ponto de vista do usuário</li>
+          <li>Valor de negócio claro e explícito</li>
+          <li>Sem tecnicismo e sem foco na solução</li>
+          <li>Pronta para execução e para mensuração de resultados</li>
+        </ul>
       </div>
-
-      <div class="flow-transition">passagem entre os boards</div>
-
-      <div class="board-flow-card">
-        <div class="board-flow-head dev">
-          <div class="board-flow-title">
-            <span class="board-flow-kicker">Board DEV</span>
-            <span class="board-flow-name">Execução técnica e entrega</span>
-          </div>
-          <p class="board-flow-desc">Execução da sprint ativa e acompanhamento técnico diário. Aqui ficam as subtarefas que representam o trabalho em andamento.</p>
-        </div>
-        <div class="board-status-row">
-          <span class="status-chip dev">Pronto para Desenvolvimento</span>
-          <span class="status-arrow">→</span>
-          <span class="status-chip dev">Desenvolvimento</span>
-          <span class="status-arrow">→</span>
-          <span class="status-chip dev">Aguardando Testes / Testes</span>
-          <span class="status-arrow">→</span>
-          <span class="status-chip dev">Pronto para Homologação</span>
-          <span class="status-arrow">→</span>
-          <span class="status-chip dev">Homologação</span>
-          <span class="status-arrow">→</span>
-          <span class="status-chip dev">Aguardando Regressão / Deploy</span>
-          <span class="status-arrow">→</span>
-          <span class="status-chip done">Concluído</span>
+      <div class="section-box">
+        <h3>O que ele avalia</h3>
+        <div class="status-list">
+          <span class="chip">Contexto obrigatório</span>
+          <span class="chip">Avaliação geral</span>
+          <span class="chip">Análise detalhada</span>
+          <span class="chip">Pontos fortes e fracos</span>
+          <span class="chip">INVEST</span>
+          <span class="chip">Checklist de produto</span>
+          <span class="chip">Critérios de aceite</span>
+          <span class="chip">Cenários funcionais</span>
+          <span class="chip">Engenharia e QA</span>
+          <span class="chip">Riscos e ambiguidades</span>
+          <span class="chip">Complexidade de negócio</span>
+          <span class="chip">Boas práticas</span>
+          <span class="chip">Mensagem final</span>
         </div>
       </div>
     </div>
+    <div class="insight">Ao elevar a qualidade da história na origem, reduzimos retrabalho e ganhamos velocidade, previsibilidade e valor para o negócio.</div>
+  </div>
+</section>
 
-    <div class="board-usage-grid">
-      <div class="usage-card">
-        <h3>Como usar o Board PRD</h3>
-        <div class="usage-line"><div class="usage-label">Quem usa</div><div class="usage-content"><span class="mini-tags"><span class="mini-tag">PM</span><span class="mini-tag">PO</span></span></div></div>
-        <div class="usage-line"><div class="usage-label">O que aparece</div><div class="usage-content">Épicos e Histórias/Bugs no refinamento ou aguardando sprint.</div></div>
-        <div class="usage-line"><div class="usage-label">Ações</div><div class="usage-content">Priorizar e ordenar o backlog · conduzir refinamentos · definir e validar critérios de aceite · realizar homologação após QA.</div></div>
-        <div class="usage-line"><div class="usage-label">Não aparece</div><div class="usage-content">Subtarefas — ficam exclusivamente no Board DEV.</div></div>
-      </div>
+<section class="slide" id="slide-11">
+  <div class="slide-content">
+    <div class="slide-label">11 · Histórias</div>
+    <h1 class="slide-h1">Como usar o prompt</h1>
+    <p class="slide-subtitle">Direto na História de Usuário, pelo Rovo.</p>
+    <div class="metrics-list">
+      <div class="metric-row"><div class="metric-rank">1</div><div class="metric-body"><h3>Abra a História de Usuário</h3><p>Selecione a história que quer avaliar.</p></div></div>
 
-      <div class="usage-card">
-        <h3>Como usar o Board DEV</h3>
-        <div class="usage-line"><div class="usage-label">Quem usa</div><div class="usage-content"><span class="mini-tags"><span class="mini-tag">TM</span><span class="mini-tag">TL</span><span class="mini-tag">DEV</span><span class="mini-tag">QA</span></span></div></div>
-        <div class="usage-line"><div class="usage-label">O que aparece</div><div class="usage-content">Somente subtarefas da sprint corrente. Histórias e Épicos permanecem no Board PRD.</div></div>
-        <div class="usage-line"><div class="usage-label">Ações</div><div class="usage-content">Mover subtarefas conforme o trabalho avança · registrar bloqueios com flag antes da Daily · executar e aprovar code review · confirmar deploy.</div></div>
-        <div class="usage-line"><div class="usage-label">Subtarefas</div><div class="usage-content">Aberto · Em Andamento · Aguardando Revisão · Em Revisão · Concluído.</div></div>
-      </div>
+      <div class="metric-row"><div class="metric-rank">2</div><div class="metric-body"><h3>Clique em “Pergunte ao Rovo”</h3><p>No canto superior direito da tela, ao lado das notificações.</p></div></div>
+
+      <div class="metric-row"><div class="metric-rank">3</div><div class="metric-body"><h3>Selecione o agente “PM EXPERT”</h3><p>Entre as opções de agentes apresentadas pelo Rovo.</p></div></div>
+
+      <div class="metric-row"><div class="metric-rank">4</div><div class="metric-body"><h3>Clique em “Avalie a User Story”</h3><p>O Rovo inclui a história e inicia a análise com base na estrutura definida.</p></div></div>
+
+      <div class="metric-row"><div class="metric-rank">5</div><div class="metric-body"><h3>Leia e, se quiser, peça para reescrever</h3><p>O PM/PO pode pedir que o prompt reescreva a história conforme os pontos sinalizados.</p></div></div>
+    </div>
+    <div class="insight"><strong>Atenção:</strong> a ferramenta ajuda, mas a responsabilidade pela qualidade é do Produto. PM/PO deve ler criticamente, avaliar o que faz sentido no contexto e decidir o que aplicar.</div>
+  </div>
+</section>
+
+<section class="slide" id="slide-12">
+  <div class="page">
+    <div class="label">12 · Fluxo</div>
+    <h1>Boards e status</h1>
+    <div class="subtitle">A História começa no PRD, passa pelo DEV para execução técnica e retorna ao PRD para validação e conclusão.</div>
+    <section class="journey">
+      <article class="node prd">
+        <div class="node-kicker">Board PRD</div>
+        <div class="node-title">1. Preparação e refinamento</div>
+        <div class="node-desc">
+          A demanda é priorizada, detalhada e preparada até estar pronta para desenvolvimento.
+        </div>
+        <div class="status-list">
+          <span class="chip">Backlog</span>
+          <span class="chip">Pronto para Refinar</span>
+          <span class="chip">Refinamento de Negócio</span>
+          <span class="chip">Refinamento Técnico</span>
+        </div>
+      </article>
+
+      <article class="node dev">
+        <div class="node-kicker">Board DEV</div>
+        <div class="node-title">2. Execução técnica</div>
+        <div class="node-desc">
+          O time acompanha a execução técnica diária por meio das subtarefas da Sprint ativa.
+        </div>
+        <div class="status-list">
+          <span class="chip">Pronto para Desenvolvimento</span>
+          <span class="chip">Desenvolvimento</span>
+          <span class="chip">Aguardando Testes / Testes</span>
+        </div>
+      </article>
+
+      <article class="node prd">
+        <div class="node-kicker">Board PRD</div>
+        <div class="node-title">3. Validação e conclusão</div>
+        <div class="node-desc">
+          Após a execução técnica, a História volta a ser acompanhada no PRD até sua conclusão.
+        </div>
+        <div class="status-list">
+          <span class="chip">Pronto para Homologação</span>
+          <span class="chip">Homologação</span>
+          <span class="chip">Aguardando Regressão / Deploy</span>
+          <span class="chip done">Concluído</span>
+        </div>
+      </article>
+</section>
+    <div class="message">
+      A História nasce e termina no Board PRD. O Board DEV é a etapa intermediária de execução técnica.
     </div>
   </div>
 </section>
 
-<!-- 09 ESTIMATIVAS -->
-<section class="slide" id="slide-9">
+<section class="slide" id="slide-13">
+  <div class="page">
+    <div class="label">13 · Fluxo</div>
+    <h1>Visão End to End</h1>
+    <div class="subtitle">Este desenho mostra o fluxo completo do trabalho. A visão acima explica em qual board cada etapa é acompanhada; aqui enxergamos a jornada inteira, sem perder a sequência ponta a ponta.</div>
+    <section class="endtoend">
+      <div class="e2e-flow">
+        <div class="e2e-step prd">
+          <div class="e2e-step-num">1</div>
+          <div class="e2e-step-board">Board PRD</div>
+          <div class="e2e-step-title">Backlog</div>
+          <div class="e2e-step-desc">Demanda registrada, priorizada e preparada para seguir no fluxo.</div>
+        </div>
+
+        <div class="e2e-step prd">
+          <div class="e2e-step-num">2</div>
+          <div class="e2e-step-board">Board PRD</div>
+          <div class="e2e-step-title">Refinamento</div>
+          <div class="e2e-step-desc">Negócio e tecnologia alinham contexto, critérios, solução e prontidão.</div>
+        </div>
+
+        <div class="e2e-step dev">
+          <div class="e2e-step-num">3</div>
+          <div class="e2e-step-board">Board DEV</div>
+          <div class="e2e-step-title">Desenvolvimento</div>
+          <div class="e2e-step-desc">A execução técnica acontece por meio das subtarefas da Sprint ativa.</div>
+        </div>
+
+        <div class="e2e-step dev">
+          <div class="e2e-step-num">4</div>
+          <div class="e2e-step-board">Board DEV</div>
+          <div class="e2e-step-title">Testes</div>
+          <div class="e2e-step-desc">Validação técnica e garantia de qualidade antes do retorno ao PRD.</div>
+        </div>
+
+        <div class="e2e-step prd">
+          <div class="e2e-step-num">5</div>
+          <div class="e2e-step-board">Board PRD</div>
+          <div class="e2e-step-title">Homologação</div>
+          <div class="e2e-step-desc">A História volta a ser acompanhada no PRD para validação de negócio.</div>
+        </div>
+
+        <div class="e2e-step prd">
+          <div class="e2e-step-num">6</div>
+          <div class="e2e-step-board">Board PRD</div>
+          <div class="e2e-step-title">Deploy / validação final</div>
+          <div class="e2e-step-desc">A entrega segue para disponibilização e validações finais necessárias.</div>
+        </div>
+
+        <div class="e2e-step finish">
+          <div class="e2e-step-num">7</div>
+          <div class="e2e-step-board">Board PRD</div>
+          <div class="e2e-step-title">Concluído</div>
+          <div class="e2e-step-desc">A História encerra sua jornada no Board PRD.</div>
+        </div>
+      </div>
+
+      <div class="e2e-return">
+        <div class="e2e-return-line"></div>
+        <div class="e2e-return-label">retorno ao PRD após a execução técnica</div>
+        <div class="e2e-return-line"></div>
+      </div>
+
+      <div class="e2e-note">
+        O fluxo é contínuo, mas o board de referência muda conforme a natureza do trabalho: preparação e conclusão no PRD, execução técnica no DEV.
+      </div>
+    
+    </section>
+    <div class="legend">
+      <span><i class="dot blue"></i> Preparação e acompanhamento da História</span>
+      <span><i class="dot green"></i> Execução técnica da Sprint</span>
+      <span><i class="dot orange"></i> Retorno para validação e conclusão</span>
+    </div>
+  </div>
+</section>
+
+<section class="slide" id="slide-14">
   <div class="slide-content">
-    <div class="slide-label">09 · Métricas</div>
+    <div class="slide-label">14 · Métricas</div>
     <h1 class="slide-h1">Estimativas e Story Points</h1>
     <p class="slide-subtitle">Utilizamos a sequência de Fibonacci para representar complexidade, esforço e incerteza — não horas ou dias.</p>
 
@@ -1485,10 +2730,9 @@ header button {
   </div>
 </section>
 
-<!-- 10 CRITÉRIOS DE QUALIDADE -->
-<section class="slide" id="slide-10">
+<section class="slide" id="slide-15">
   <div class="slide-content">
-    <div class="slide-label">10 · Qualidade</div>
+    <div class="slide-label">15 · Qualidade</div>
     <h1 class="slide-h1">Critérios de qualidade do fluxo</h1>
     <p class="slide-subtitle">DoR e DoD funcionam como portas de qualidade: ajudam a evitar entrada prematura na sprint e conclusão sem validação suficiente.</p>
 
@@ -1534,13 +2778,11 @@ header button {
   </div>
 </section>
 
-<!-- 11 TRATAMENTO DE BLOQUEIOS -->
-<section class="slide" id="slide-11">
+<section class="slide" id="slide-16">
   <div class="slide-content">
-    <div class="slide-label">11 · Operacional</div>
+    <div class="slide-label">16 · Operacional</div>
     <h1 class="slide-h1">Tratamento de bloqueios</h1>
     <p class="slide-subtitle">Bloqueios não registrados se tornam gargalos invisíveis. Quando algo impede a evolução do trabalho, precisa estar visível para gerar ação.</p>
-
     <p style="font-weight: 700; margin-top: 20px; margin-bottom: 10px;">Fluxo de tratamento</p>
     <div class="blocker-flow">
       <div class="blocker-step">Identificação</div>
@@ -1553,46 +2795,6 @@ header button {
       <div class="blocker-arrow">→</div>
       <div class="blocker-step">Resolução</div>
     </div>
-
-    <p style="font-weight: 700; margin-top: 18px; margin-bottom: 8px;">Exemplos de bloqueios</p>
-    <div class="blocker-examples-grid">
-      <div class="blocker-card">
-        <h3>Dependência de outro time</h3>
-        <ul>
-          <li>API não entregue</li>
-          <li>Contrato não definido</li>
-          <li>Integração pendente</li>
-        </ul>
-      </div>
-
-      <div class="blocker-card">
-        <h3>Decisão de negócio</h3>
-        <ul>
-          <li>Regra pendente</li>
-          <li>Critério de aceite indefinido</li>
-          <li>Prioridade em disputa</li>
-        </ul>
-      </div>
-
-      <div class="blocker-card">
-        <h3>Problema técnico</h3>
-        <ul>
-          <li>Ambiente indisponível</li>
-          <li>Erro de infraestrutura</li>
-          <li>Falha em dependência técnica</li>
-        </ul>
-      </div>
-
-      <div class="blocker-card">
-        <h3>Bloqueio externo</h3>
-        <ul>
-          <li>Fornecedor</li>
-          <li>Aprovação regulatória</li>
-          <li>Dependência contratual</li>
-        </ul>
-      </div>
-    </div>
-
     <div class="blocker-rule">
       <div class="blocker-rule-card gold">
         <strong>Regra de ouro</strong>
@@ -1606,10 +2808,30 @@ header button {
   </div>
 </section>
 
-<!-- 12 ERROS MAIS COMUNS -->
-<section class="slide" id="slide-12">
+<section class="slide" id="slide-17">
   <div class="slide-content">
-    <div class="slide-label">12 · Prevenção</div>
+    <div class="slide-label">17 · Operacional</div>
+    <h1 class="slide-h1">Registrar um bloqueio no Jira</h1>
+    <p class="slide-subtitle">Na prática: como deixar um bloqueio visível para gerar ação.</p>
+    <div class="metrics-list">
+      <div class="metric-row"><div class="metric-rank">1</div><div class="metric-body"><h3>Abra o card travado</h3><p>A História ou subtarefa que está impedida de avançar.</p></div></div>
+
+      <div class="metric-row"><div class="metric-rank">2</div><div class="metric-body"><h3>Ative a flag de impedimento</h3><p>No menu do card, adicione a flag de bloqueio.</p></div></div>
+
+      <div class="metric-row"><div class="metric-rank">3</div><div class="metric-body"><h3>Preencha o campo “Motivo do bloqueio”</h3><p>O que trava, desde quando e o que precisa para destravar.</p></div></div>
+
+      <div class="metric-row"><div class="metric-rank">4</div><div class="metric-body"><h3>Vincule a causa</h3><p>Em “Vincular”, use “é bloqueado por” apontando o card ou dependência responsável.</p></div></div>
+
+      <div class="metric-row"><div class="metric-rank">5</div><div class="metric-body"><h3>Comunique e escale</h3><p>Avise TM/PM e leve na Daily; escale se não resolver no prazo.</p></div></div>
+
+      <div class="metric-row"><div class="metric-rank">6</div><div class="metric-body"><h3>Ao destravar, atualize</h3><p>Remova a flag, registre a resolução e atualize o status.</p></div></div>
+    </div>
+  </div>
+</section>
+
+<section class="slide" id="slide-18">
+  <div class="slide-content">
+    <div class="slide-label">18 · Prevenção</div>
     <h1 class="slide-h1">Erros mais comuns</h1>
     <p class="slide-subtitle">Padrões que costumam gerar perda de previsibilidade, retrabalho ou baixa visibilidade do fluxo.</p>
 
@@ -1658,13 +2880,11 @@ header button {
   </div>
 </section>
 
-<!-- 13 INDICADORES -->
-<section class="slide" id="slide-13">
+<section class="slide" id="slide-19">
   <div class="slide-content">
-    <div class="slide-label">13 · Indicadores</div>
+    <div class="slide-label">19 · Indicadores</div>
     <h1 class="slide-h1">Métricas essenciais</h1>
     <p class="slide-subtitle">Indicadores não existem para punir. Existem para revelar onde o fluxo precisa de ajuda. Comece pelas de maior impacto.</p>
-
     <div class="metrics-list">
       <div class="metric-row">
         <div class="metric-rank">1</div>
@@ -1701,7 +2921,16 @@ header button {
         </div>
         <span class="metric-frequency mid">Por sprint</span>
       </div>
+    </div>
+  </div>
+</section>
 
+<section class="slide" id="slide-20">
+  <div class="slide-content">
+    <div class="slide-label">20 · Indicadores</div>
+    <h1 class="slide-h1">Métricas essenciais</h1>
+    <p class="slide-subtitle">Indicadores complementares, de acompanhamento periódico do fluxo e do contexto estratégico.</p>
+    <div class="metrics-list">
       <div class="metric-row">
         <div class="metric-rank">5</div>
         <div class="metric-body">
@@ -1732,10 +2961,9 @@ header button {
   </div>
 </section>
 
-<!-- 14 CULTURA DE FLUXO -->
-<section class="slide" id="slide-14">
+<section class="slide" id="slide-21">
   <div class="slide-content">
-    <div class="slide-label">14 · Mindset</div>
+    <div class="slide-label">21 · Mindset</div>
     <h1 class="slide-h1">Cultura de fluxo</h1>
     <p class="slide-subtitle">Todo comportamento operacional deixa rastros nos indicadores.</p>
 
@@ -1768,10 +2996,9 @@ header button {
   </div>
 </section>
 
-<!-- 15 REALIDADE vs IDEAL -->
-<section class="slide" id="slide-15">
+<section class="slide" id="slide-22">
   <div class="slide-content">
-    <div class="slide-label">15 · Pragmatismo</div>
+    <div class="slide-label">22 · Pragmatismo</div>
     <h1 class="slide-h1">Quando a realidade não está perfeita</h1>
     <p class="slide-subtitle">Você vai chegar e o fluxo pode não estar no estado ideal. Isso é normal. Saber como agir nessas situações é parte do onboarding.</p>
 
@@ -1800,8 +3027,7 @@ header button {
   </div>
 </section>
 
-<!-- 16 ENCERRAMENTO -->
-<section class="slide slide-final" id="slide-16">
+<section class="slide slide-final" id="slide-23">
   <div class="final-shape-1"></div>
   <div class="final-shape-2"></div>
   <div class="final-inner">
@@ -1847,6 +3073,7 @@ header button {
           <br><br>
           <a href="https://abasteceai.atlassian.net/wiki/spaces/A/overview?homepageId=400982080"
              target="_blank"
+             rel="noopener noreferrer"
              style="color: #FFD100; font-weight: 700;">
              Acessar documentação &rarr;
           </a>
@@ -1861,10 +3088,34 @@ header button {
 </div>
 
 <script>
-  const TOTAL = 16;
+  const TOTAL = 23;
   let current = 1;
-  const slideNames = ['Capa', 'Cerimônias', 'Fluxo', 'Boards', 'Papéis', 'Hierarquia', 'Estimativa', 'DoR & DoD', 'Bloqueios', 'Indicadores', 'Erros Comuns', 'Status', 'Atualização', 'Bloqueios Práticos', 'Pragmatismo', 'Encerramento'];
-  
+  const slideNames = [
+    'Capa',
+    'Somos o Chapter de Agilidade',
+    'O que você vai encontrar aqui',
+    'Papéis · Produto e liderança',
+    'Papéis · Execução e qualidade',
+    'Cadência · Execução e refinamento',
+    'Cadência · Planejamento e melhoria',
+    'Da iniciativa à entrega de valor',
+    'Como uma iniciativa gera valor',
+    'Validação de Histórias de Usuário',
+    'Como usar o prompt',
+    'Boards e status',
+    'Visão End to End',
+    'Estimativas e Story Points',
+    'Critérios de qualidade do fluxo',
+    'Tratamento de bloqueios',
+    'Registrar um bloqueio no Jira',
+    'Erros mais comuns',
+    'Métricas essenciais',
+    'Métricas essenciais (continuação)',
+    'Cultura de fluxo',
+    'Quando a realidade não está perfeita',
+    'Bem-vindo ao time'
+  ];
+
   function navigate(dir) {
     const next = current + dir;
     if (next < 1 || next > TOTAL) return;
@@ -1875,24 +3126,22 @@ header button {
     document.getElementById('prev-btn').disabled = current === 1;
     document.getElementById('next-btn').disabled = current === TOTAL;
     document.getElementById('progress').style.width = ((current / TOTAL) * 100) + '%';
-    window.scrollTo({ top: 0, behavior: 'smooth' });
-    // Anunciar slide para leitores de tela
-    const announcement = `Slide ${current} de ${TOTAL}: ${slideNames[current - 1]}`;
+    const announcement = 'Slide ' + current + ' de ' + TOTAL + ': ' + slideNames[current - 1];
     const ariaLive = document.createElement('div');
     ariaLive.setAttribute('aria-live', 'polite');
     ariaLive.setAttribute('aria-atomic', 'true');
     ariaLive.className = 'sr-only';
     ariaLive.textContent = announcement;
     document.body.appendChild(ariaLive);
-    setTimeout(() => ariaLive.remove(), 1000);
+    setTimeout(function(){ ariaLive.remove(); }, 1000);
   }
   document.addEventListener('keydown', function(e) {
     if (e.key === 'ArrowRight' || e.key === 'ArrowDown' || e.key === ' ') { e.preventDefault(); navigate(1); }
     if (e.key === 'ArrowLeft'  || e.key === 'ArrowUp')                    { e.preventDefault(); navigate(-1); }
   });
   let touchX = null;
-  document.addEventListener('touchstart', e => { touchX = e.touches[0].clientX; });
-  document.addEventListener('touchend', e => {
+  document.addEventListener('touchstart', function(e){ touchX = e.touches[0].clientX; });
+  document.addEventListener('touchend', function(e){
     if (touchX === null) return;
     const dx = touchX - e.changedTouches[0].clientX;
     if (Math.abs(dx) > 50) navigate(dx > 0 ? 1 : -1);
