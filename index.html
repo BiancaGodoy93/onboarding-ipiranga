@@ -2255,6 +2255,55 @@ header button {
 /* ===== V24: número dos passos alinhado ao topo (nível do título) ===== */
 .slide-content > .metrics-list .metric-row{ align-items:start !important; }
 .slide-content > .metrics-list .metric-row .metric-rank{ margin-top:1px !important; align-self:start !important; }
+
+/* ===== V25: PALCO FIXO 16:9 (1440x810) que escala pra qualquer tela — responsivo ===== */
+html, body { height: 100%; overflow: hidden; }
+.shell { height: 100vh !important; min-height: 0 !important; overflow: hidden; }
+main {
+  flex: 1 1 auto !important;
+  position: relative !important;
+  display: block !important;
+  overflow: hidden !important;
+  min-height: 0;
+}
+.slide { min-height: 0 !important; }
+.slide.active {
+  position: absolute !important;
+  left: 50% !important;
+  top: 50% !important;
+  transform: translate(-50%, -50%) scale(var(--fit, 1)) !important;
+  transform-origin: center center !important;
+  width: 1440px !important;
+  height: 810px !important;
+  min-height: 0 !important;
+  display: flex !important;
+  flex-direction: column !important;
+  overflow: hidden !important;
+  box-shadow: 0 4px 30px rgba(0,0,0,.10);
+}
+.slide-content, .page {
+  max-width: none !important;
+  width: 100% !important;
+  flex: 1 1 auto !important;
+}
+
+/* ===== V26: distribuição no palco — cards no tamanho do conteúdo, centralizados ===== */
+.slide-content > .roles-card-grid,
+.slide-content > .ceremony-card-grid,
+.slide-content > .value-context-grid,
+.slide-content > .error-card-grid,
+.slide-content > .reality-grid,
+.slide-content > .topic-grid,
+.slide-content > .quality-grid,
+.slide-content > .estimate-grid,
+.slide-content > .section-grid,
+#slide-16 .error-card-grid, #slide-20 .reality-grid, #slide-8 .section-grid {
+  align-content: center !important;
+  grid-auto-rows: min-content !important;
+  row-gap: 20px !important;
+}
+#slide-14 .blocker-flow2, #slide-14 .bloq-types { flex: 1 1 auto !important; align-content: start !important; }
+#slide-14 .bloq-heading { margin-bottom: 12px !important; }
 </style>
 </head>
 <body>
@@ -2629,9 +2678,6 @@ header button {
           Entregar soluções com qualidade, previsibilidade e foco na geração de valor.
         </div>
       </div>
-    </div>
-    <div class="value-flow-insight">
-      A separação entre Upstream e Downstream ajuda o time a dedicar o tempo certo para pensar antes de executar e executar com foco quando chega o momento de construir.
     </div>
   </div>
 </section>
@@ -3296,6 +3342,21 @@ header button {
     if (Math.abs(dx) > 50) navigate(dx > 0 ? 1 : -1);
     touchX = null;
   });
+</script>
+<script>
+  (function(){
+    function fitStage(){
+      var m=document.querySelector('main'); if(!m) return;
+      var f=Math.min(m.clientWidth/1440, m.clientHeight/810);
+      document.documentElement.style.setProperty('--fit', f);
+    }
+    window.addEventListener('resize', fitStage);
+    window.addEventListener('orientationchange', fitStage);
+    window.addEventListener('load', fitStage);
+    document.addEventListener('DOMContentLoaded', fitStage);
+    if(document.fonts && document.fonts.ready){ document.fonts.ready.then(fitStage); }
+    fitStage();
+  })();
 </script>
 </body>
 </html>
