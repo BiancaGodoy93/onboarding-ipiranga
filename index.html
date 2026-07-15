@@ -2205,6 +2205,19 @@ header button {
 #slide-8 .insight { margin-top: 18px !important; margin-bottom: 0 !important; }
 .slide-content > .metrics-list { flex: 1 1 auto !important; min-height: 0 !important; justify-content: flex-start !important; }
 .slide-content > .metrics-list .metric-row { flex: 1 1 0 !important; align-items: center !important; min-height: 0 !important; }
+
+/* ===== V22: slide 14 enriquecido (fluxo explicado + tipos de bloqueio) ===== */
+#slide-14 .bloq-heading{ font-weight:700; font-size:16px; margin:0 0 10px; color:var(--text); }
+#slide-14 .blocker-flow2{ display:grid; grid-template-columns:1fr auto 1fr auto 1fr auto 1fr auto 1fr; align-items:stretch; gap:8px; margin-bottom:20px; }
+#slide-14 .bstep{ background:var(--surface); border:1px solid var(--border); border-radius:10px; padding:12px 14px; }
+#slide-14 .bstep-t{ font-weight:700; color:var(--blue); font-size:15px; margin-bottom:4px; }
+#slide-14 .bstep-d{ font-size:13px; color:var(--text-mid); line-height:1.35; }
+#slide-14 .barrow{ align-self:center; color:var(--text-soft); font-weight:800; font-size:18px; }
+#slide-14 .bloq-types{ display:grid; grid-template-columns:repeat(4,1fr); gap:12px; margin-bottom:18px; }
+#slide-14 .btype{ background:var(--surface); border:1px solid var(--border); border-top:3px solid var(--orange); border-radius:10px; padding:12px 14px; }
+#slide-14 .btype h3{ font-size:14px; font-weight:700; color:var(--text); margin:0 0 4px; }
+#slide-14 .btype p{ font-size:13px; color:var(--text-mid); line-height:1.35; margin:0; }
+#slide-14 .insight{ margin-top:0 !important; }
 </style>
 </head>
 <body>
@@ -2883,28 +2896,29 @@ header button {
     <div class="slide-label">14 · Operacional</div>
     <h1 class="slide-h1">Tratamento de bloqueios</h1>
     <p class="slide-subtitle">Bloqueios não registrados se tornam gargalos invisíveis. Quando algo impede a evolução do trabalho, precisa estar visível para gerar ação.</p>
-    <p style="font-weight: 700; margin-top: 20px; margin-bottom: 10px;">Fluxo de tratamento</p>
-    <div class="blocker-flow">
-      <div class="blocker-step">Identificação</div>
-      <div class="blocker-arrow">→</div>
-      <div class="blocker-step">Registro</div>
-      <div class="blocker-arrow">→</div>
-      <div class="blocker-step">Comunicação</div>
-      <div class="blocker-arrow">→</div>
-      <div class="blocker-step">Escalonamento</div>
-      <div class="blocker-arrow">→</div>
-      <div class="blocker-step">Resolução</div>
+
+    <p class="bloq-heading">Fluxo de tratamento</p>
+    <div class="blocker-flow2">
+      <div class="bstep"><div class="bstep-t">Identificação</div><div class="bstep-d">Percebeu que algo trava o avanço do item.</div></div>
+      <div class="barrow">→</div>
+      <div class="bstep"><div class="bstep-t">Registro</div><div class="bstep-d">Flag no card e preenche o motivo do bloqueio.</div></div>
+      <div class="barrow">→</div>
+      <div class="bstep"><div class="bstep-t">Comunicação</div><div class="bstep-d">Sinaliza na Daily e para quem depende.</div></div>
+      <div class="barrow">→</div>
+      <div class="bstep"><div class="bstep-t">Escalonamento</div><div class="bstep-d">Sem solução no prazo, sobe para TM/PM.</div></div>
+      <div class="barrow">→</div>
+      <div class="bstep"><div class="bstep-t">Resolução</div><div class="bstep-d">Destravou: atualiza o status e segue.</div></div>
     </div>
-    <div class="blocker-rule">
-      <div class="blocker-rule-card gold">
-        <strong>Regra de ouro</strong>
-        Se impede a evolução do trabalho, precisa estar visível no Jira.
-      </div>
-      <div class="blocker-rule-card blue">
-        <strong>Insight</strong>
-        Bloqueios registrados geram ação. Bloqueios invisíveis viram atraso.
-      </div>
+
+    <p class="bloq-heading">Tipos de bloqueio</p>
+    <div class="bloq-types">
+      <div class="btype"><h3>Dependência de outro time</h3><p>API, contrato ou integração pendente.</p></div>
+      <div class="btype"><h3>Decisão de negócio</h3><p>Regra, critério de aceite ou prioridade indefinidos.</p></div>
+      <div class="btype"><h3>Problema técnico</h3><p>Ambiente, infraestrutura ou dependência técnica.</p></div>
+      <div class="btype"><h3>Bloqueio externo</h3><p>Fornecedor, aprovação regulatória ou contratual.</p></div>
     </div>
+
+    <div class="insight"><strong>Regra de ouro:</strong> se impede a evolução do trabalho, precisa estar visível no Jira. Bloqueio registrado gera ação; bloqueio invisível vira atraso.</div>
   </div>
 </section>
 
