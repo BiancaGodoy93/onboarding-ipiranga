@@ -2175,6 +2175,36 @@ header button {
 #slide-7 .value-flow-card { height: auto; }
 #slide-7 .value-flow-objective { margin-top: 10px; }
 #slide-7 .value-flow-insight { margin-top: 10px; }
+
+/* ===== V21: preenchimento UNIFICADO e coeso (verificado no Chrome, 1512x786) ===== */
+.slide-content > .roles-card-grid,
+.slide-content > .ceremony-card-grid,
+.slide-content > .value-context-grid,
+.slide-content > .error-card-grid,
+.slide-content > .reality-grid,
+.slide-content > .topic-grid,
+.slide-content > .quality-grid,
+.slide-content > .estimate-grid,
+#slide-16 .error-card-grid,
+#slide-20 .reality-grid,
+#slide-14 .blocker-rule,
+#slide-8 .section-grid {
+  flex: 1 1 auto !important;
+  min-height: 0 !important;
+  align-content: stretch !important;
+  grid-auto-rows: 1fr !important;
+  margin-top: 18px !important;
+}
+.role-card, .error-card, .reality-col, .value-context-card, .topic-card, .section-box {
+  display: flex !important; flex-direction: column !important; justify-content: center !important;
+}
+.ceremony-card, .quality-card { display: flex !important; flex-direction: column !important; }
+.ceremony-card-body { flex: 1 1 auto !important; display: flex !important; flex-direction: column !important; justify-content: center !important; }
+.quality-list { align-content: center !important; }
+.blocker-rule-card { justify-content: center !important; }
+#slide-8 .insight { margin-top: 18px !important; margin-bottom: 0 !important; }
+.slide-content > .metrics-list { flex: 1 1 auto !important; min-height: 0 !important; justify-content: flex-start !important; }
+.slide-content > .metrics-list .metric-row { flex: 1 1 0 !important; align-items: center !important; min-height: 0 !important; }
 </style>
 </head>
 <body>
